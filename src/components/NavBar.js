@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 
@@ -13,6 +13,11 @@ const NavBar = () => {
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
+
+  // Use useEffect to ensure that the activeLink state is updated before rendering
+  useEffect(() => {
+    // Your logic to handle link activation (e.g., styling updates) can go here
+  }, [activeLink]);
 
   return (
     <div className="nav-container">
