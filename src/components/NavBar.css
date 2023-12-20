@@ -29,3 +29,6 @@ li {
 .toggler {
     padding-top: 85vh;
 }
+.right {
+  margin-left: -190px;
+}

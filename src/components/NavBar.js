@@ -34,8 +34,8 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      <div className="toggler" onClick={toggleVisibility}>
-        <i class="fa fa-caret-left" aria-hidden="true"></i>
+      <div className={`toggler ${isVisible ? "left" : "right"}`} onClick={toggleVisibility}>
+        <i className={`fa fa-caret-${isVisible ? "left" : "right"}`} aria-hidden="true"></i>
       </div>
     </div>
   );
