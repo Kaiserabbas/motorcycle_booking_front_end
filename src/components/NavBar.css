@@ -33,3 +33,12 @@ li {
 .right {
   margin-left: -190px;
 }
+a {
+    text-decoration: none;
+}
+.active {  
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+}

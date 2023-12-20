@@ -4,9 +4,14 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [activeLink, setActiveLink] = useState(null);
 
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
+  };
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
   };
 
   return (
@@ -15,9 +20,23 @@ const NavBar = () => {
         <h1>TITLE</h1>
         <ul className="nav-list">
           <li>
-            <Link to="/reservation">Reservation</Link>
+            <Link
+              to="/reservation"
+              className={activeLink === "/reservation" ? "active" : ""}
+              onClick={() => handleLinkClick("/reservation")}
+            >
+              Reservation
+            </Link>
           </li>
-          <li>LIFESTYLE</li>
+          <li>
+            <Link
+              to="#"
+              className={activeLink === "#" ? "active" : ""}
+              onClick={() => handleLinkClick("#")}
+            >
+              LIFESTYLE
+            </Link>
+          </li>
           <li>SHOP</li>
           <li>TEST DRIVE</li>
         </ul>

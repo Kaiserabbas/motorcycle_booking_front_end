@@ -1,9 +1,10 @@
 import React from "react";
+import NavBar from "./NavBar";
 
 const Reservation =()=> {
     return(
         <div>
-            <h1>This is the Reservation Page</h1>
+            <NavBar />
         </div>
     )
 }
