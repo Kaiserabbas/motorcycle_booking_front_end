@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -13,7 +14,9 @@ const NavBar = () => {
       <div className={`navigation ${isVisible ? "" : "hidden"}`}>
         <h1>TITLE</h1>
         <ul className="nav-list">
-          <li>MODELS</li>
+          <li>
+            <Link to="/reservation">Reservation</Link>
+          </li>
           <li>LIFESTYLE</li>
           <li>SHOP</li>
           <li>TEST DRIVE</li>
@@ -34,8 +37,14 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      <div className={`toggler ${isVisible ? "left" : "right"}`} onClick={toggleVisibility}>
-        <i className={`fa fa-caret-${isVisible ? "left" : "right"}`} aria-hidden="true"></i>
+      <div
+        className={`toggler ${isVisible ? "left" : "right"}`}
+        onClick={toggleVisibility}
+      >
+        <i
+          className={`fa fa-caret-${isVisible ? "left" : "right"}`}
+          aria-hidden="true"
+        ></i>
       </div>
     </div>
   );
