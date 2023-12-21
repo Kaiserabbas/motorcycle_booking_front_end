@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
-import './NavBar.css'
+import '../style/NavBar.css'
 
 const Reservation =()=> {
     return(

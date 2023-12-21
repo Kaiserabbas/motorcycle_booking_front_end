@@ -1,0 +1,52 @@
+.mainUi {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 15fr 85fr;
+    grid-template-rows: 100fr;
+    background-color: whitesmoke;
+}
+
+/* .mainUi div {
+    height: 20px;
+} */
+
+.mainContainer {
+    display: grid;
+    grid-template-columns: 7fr 86fr 7fr;
+    background-color: red;
+}
+
+.mainBody {
+    align-items: center;
+    justify-content: center;
+}
+
+.mainButton {
+    justify-content: center;
+    background-color: yellow;
+}
+
+.buttonContainerLeft,
+.buttonContainerRight {
+background-color: green;
+padding: 1.5rem 2rem 1.5rem 2rem;
+}
+
+.buttonContainerLeft button,
+.buttonContainerRight button{
+    border: transparent;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+}
+
+.buttonContainerLeft {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-left: -1px;
+}
+
+.buttonContainerRight {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}

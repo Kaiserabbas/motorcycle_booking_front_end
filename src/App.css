@@ -1,4 +1,6 @@
-.main-ui {
-  display: flex;
-  justify-content: space-between;
+.app {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  height: 60rem;
 }

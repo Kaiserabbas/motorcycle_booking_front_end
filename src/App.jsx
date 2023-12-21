@@ -6,10 +6,10 @@ import { Route, Routes } from "react-router-dom";
 import Reservation from "./components/Reservation";
 const App =()=>{
   return(
-    <div>
+    <div className="app">
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/reservation" element={<Reservation />} />
+        {/* <Route path="/reservation" element={<Reservation />} /> */}
       </Routes>
     </div>
   )
