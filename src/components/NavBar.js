@@ -26,11 +26,20 @@ const NavBar = () => {
         <ul className="nav-list">
           <li>
             <Link
+              to="/motorcycles"
+              className={activeLink === "/motorcycle" ? "active" : ""}
+              onClick={() => handleLinkClick("/motorcycle")}
+            >
+              MOTORCYCLES
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/reservation"
               className={activeLink === "/reservation" ? "active" : ""}
               onClick={() => handleLinkClick("/reservation")}
             >
-              Reservation
+            RESERVE
             </Link>
           </li>
           <li>
@@ -39,11 +48,28 @@ const NavBar = () => {
               className={activeLink === "#" ? "active" : ""}
               onClick={() => handleLinkClick("#")}
             >
-              LIFESTYLE
+            MY RESERVATIONS
             </Link>
           </li>
-          <li>SHOP</li>
-          <li>TEST DRIVE</li>
+          <li>
+            <Link
+              to="#"
+              className={activeLink === "#" ? "active" : ""}
+              onClick={() => handleLinkClick("#")}
+            >
+            ADD MOTORCYCLE
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="#"
+              className={activeLink === "#" ? "active" : ""}
+              onClick={() => handleLinkClick("#")}
+            >
+            DELETE MOTORCYCLE
+            </Link>
+          </li>
         </ul>
 
         <ul className="icons">
