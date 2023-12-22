@@ -1,21 +1,15 @@
 import React from "react";
+import LeftButton from "./mainPageComponents/LeftButton";
+import RightButton from "./mainPageComponents/RightButton";
+import Body from "./mainPageComponents/Body";
 
 const Main = ()=> {
     return(
         <main className="mainContainer">
-            <div className="mainButton flexV">
-                <div className="buttonContainerLeft flexH">
-            <button>{"<-"}</button>
-                </div>
-            </div>
-            <div className="mainBody flexV">
-            <h1>Lastest Model</h1>
-            </div>
-            <div className="mainButton flexV">
-            <div className="buttonContainerRight flexH">
-            <button>{"->"}</button>
-                </div>
-            </div>
+            <LeftButton/>
+            <Body/>
+            <RightButton/>
+
         </main>
     )
 }

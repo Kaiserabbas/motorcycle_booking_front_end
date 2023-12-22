@@ -3,32 +3,29 @@
     display: grid;
     grid-template-columns: 15fr 85fr;
     grid-template-rows: 100fr;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
 }
-
-/* .mainUi div {
-    height: 20px;
-} */
 
 .mainContainer {
     display: grid;
     grid-template-columns: 7fr 86fr 7fr;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .mainBody {
+    margin-top: 6rem;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .mainButton {
     justify-content: center;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .buttonContainerLeft,
 .buttonContainerRight {
-background-color: green;
+background-color: rgba(15, 227, 15, 0.951);
 padding: 1.5rem 2rem 1.5rem 2rem;
 }
 
@@ -49,4 +46,27 @@ padding: 1.5rem 2rem 1.5rem 2rem;
 .buttonContainerRight {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+}
+
+.mainBodyHeader {
+    /* margin-top: -20rem; */
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mainBodyHeader h1 {
+    font-size: 30pt;
+}
+
+.mainBodyHeader hr {
+    margin-top: 1.5rem;
+}
+.motorcyclesContainer {
+    margin-top: 8rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+
 }

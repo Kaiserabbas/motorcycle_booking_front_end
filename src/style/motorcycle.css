@@ -1,0 +1,37 @@
+.motorcycleItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.motorcycleItemPicture{
+    width: 55%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+.motorcycleItemPicture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 1px dashed red;
+}
+
+.motorcycleItemNameModel {
+    margin-top: 2rem;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.bar {
+    border: 1px dashed rgba(220, 200, 200, 0.72);
+    width: 60%;
+    align-self: center;
+}
+
+.motorcycleItemDescription,
+.motorcycleItemLinks {
+    margin-top: 1rem;
+}
