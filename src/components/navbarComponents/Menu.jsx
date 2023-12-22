@@ -69,6 +69,16 @@ const Menu = ()=>{
       Delete motorcycle
       </Link>
     </li>
+
+    <li>
+      <Link
+        to="/delete"
+        className={activeLink === "#" ? "active" : ""}
+        onClick={() => handleLinkClick("#")}
+      >
+      Logout
+      </Link>
+    </li>
   </ul>
   );
 };
