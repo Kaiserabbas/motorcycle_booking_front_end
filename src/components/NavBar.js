@@ -42,8 +42,12 @@ const NavBar = () => {
               LIFESTYLE
             </Link>
           </li>
-          <li>SHOP</li>
-          <li>TEST DRIVE</li>
+          <li>
+            <Link to="/newMoter">Add new Motor</Link>
+          </li>
+          <li>
+            <Link to="/removeMoter">Remove Motor</Link>
+          </li>
         </ul>
 
         <ul className="icons">
