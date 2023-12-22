@@ -22,30 +22,32 @@ const Menu = ()=>{
     <ul className="navList flexV">
           <li>
       <Link
-        to="/reserve"
-        className={activeLink === "/reservation" ? "active" : ""}
-        onClick={() => handleLinkClick("/reservation")}
-      >
-      NEW RESERVE
-      </Link>
-    </li>
-
-    <li>
-      <Link
         to="/motorcycles"
         className={activeLink === "/motorcycle" ? "active" : ""}
         onClick={() => handleLinkClick("/motorcycle")}
       >
-        MOTORCYCLES
+        Motorcycles
       </Link>
     </li>
+
+          <li>
+      <Link
+        to="/reserve"
+        className={activeLink === "/reservation" ? "active" : ""}
+        onClick={() => handleLinkClick("/reservation")}
+      >
+      Reserve
+      </Link>
+    </li>
+
+
     <li>
       <Link
         to="/reservations"
         className={activeLink === "#" ? "active" : ""}
         onClick={() => handleLinkClick("#")}
       >
-      MY RESERVATIONS
+      My reservations
       </Link>
     </li>
     <li>
@@ -54,7 +56,7 @@ const Menu = ()=>{
         className={activeLink === "#" ? "active" : ""}
         onClick={() => handleLinkClick("#")}
       >
-      NEW MOTORCYCLE
+      Add motorcycle
       </Link>
     </li>
 
@@ -64,7 +66,7 @@ const Menu = ()=>{
         className={activeLink === "#" ? "active" : ""}
         onClick={() => handleLinkClick("#")}
       >
-      DELETE MOTORCYCLES
+      Delete motorcycle
       </Link>
     </li>
   </ul>

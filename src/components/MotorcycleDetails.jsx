@@ -1,6 +1,6 @@
 import React from "react";
 
-const Details = ()=> {
+const MotorcycleDetails = ()=> {
    return (
     <div>
         <h1>
@@ -10,4 +10,4 @@ const Details = ()=> {
     )
 }
 
-export default Details;
+export default MotorcycleDetails;
