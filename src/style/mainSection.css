@@ -3,24 +3,20 @@
     display: grid;
     grid-template-columns: 15fr 85fr;
     grid-template-rows: 100fr;
-    /* background-color: whitesmoke; */
 }
 
 .mainContainer {
     display: grid;
     grid-template-columns: 7fr 86fr 7fr;
-    /* background-color: red; */
 }
 
 .mainBody {
     margin-top: 6rem;
     align-items: center;
-    /* justify-content: center; */
 }
 
 .mainButton {
     justify-content: center;
-    /* background-color: yellow; */
 }
 
 .buttonContainerLeft,
@@ -49,7 +45,6 @@ padding: 1.5rem 2rem 1.5rem 2rem;
 }
 
 .mainBodyHeader {
-    /* margin-top: -20rem; */
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
@@ -68,5 +63,4 @@ padding: 1.5rem 2rem 1.5rem 2rem;
     display: flex;
     gap: 1rem;
     justify-content: space-around;
-
 }

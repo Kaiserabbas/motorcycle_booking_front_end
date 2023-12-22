@@ -1,11 +1,10 @@
 import React from "react";
 import NavBar from "./NavBar";
 import Main from "./Main";
-// import Details from "./Details";
 import '../style/mainSection.css'
 
 
-const Home = () => {
+const Motorcycles = () => {
   return (
     <section className="mainUi">
       <NavBar/>
@@ -13,4 +12,4 @@ const Home = () => {
     </section>    
   );
 };
-export default Home;
+export default Motorcycles;
