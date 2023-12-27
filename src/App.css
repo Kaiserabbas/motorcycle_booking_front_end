@@ -2,6 +2,36 @@
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: auto;
-  height: 60rem;
-  background-color: white;
+  /* height: 60rem; */
+}
+
+.flexV{
+  display: flex;
+  flex-direction: column;
+}
+
+.flexH{
+  display: flex;
+}
+
+.logoutContainer {
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: #97BF11;
+}
+
+.infoContainer{
+  margin-top: 2rem;
+}
+
+#infoLogin{
+  margin-top: 1rem;
+text-align: center;
 }

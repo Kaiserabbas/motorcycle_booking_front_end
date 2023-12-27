@@ -1,13 +1,29 @@
-import { Navigate } from "react-router-dom";
-import '../style/reserve.css';
+import axios from "axios";
+import { useState } from "react";
 
+const Signup=()=>{
+    const [newUser,setNewUser]=useState({
+        name:'',
+        email:'',
+        password:'',
+    });
 
-const Reserve=()=>{
-    if(!JSON.parse(localStorage.getItem('session_token'))?.token)return(<Navigate to="/"/>);
+    const [message,setMessage]=useState(false);
+
+    const formHandler= async (e)=>{
+        e.preventDefault();
+        try {
+            const result= await axios.post("http://localhost:3000/api/v1/users/",{user:{...newUser}});
+            setMessage({success:true,message:["created successfully!"]});
+            console.log(result.data);
+        } catch (error) {
+            setMessage({error:true,message:error.response.data.message});
+        }
+    }
+
     return(
-        <div className="reserveContainer flexV">
-            <div className="reserveDiv">
-            <form  onSubmit={(e)=>{formHandler(e)}} className='formContainer flexV'>
+        <section className="signupContainer flexV">
+        <form  onSubmit={(e)=>{formHandler(e)}} className='formContainer flexV'>
             <div className='flexV'>
                 <label htmlFor="name">Full Name</label>
                 <input type="text" name="name" id="name" onChange={(e)=>{
@@ -37,9 +53,14 @@ const Reserve=()=>{
                 }}>Sign up</button>
             </div>
         </form>
-            </div>
+        <p id="infoLogin"> If you already have an Account please consider to <a href="/login">Login</a></p>
+
+        <div className="flexV infoContainer">
+        {message && message?.message.map((sms)=>(<p className={(message?.success)?'success':'error'}>{sms}</p>))}
         </div>
+        </section>
     );
+
 };
 
-export default Reserve;
+export default Signup;

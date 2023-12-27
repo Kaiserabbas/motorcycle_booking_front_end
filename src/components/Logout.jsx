@@ -1,10 +1,11 @@
 import { Navigate } from "react-router-dom";
 
-const MotorcycleForm=()=>{
+const Logout = ()=>{
     if(!JSON.parse(localStorage.getItem('session_token'))?.token)return(<Navigate to="/"/>);
-return(
-    <h1>the motorcycle form</h1>
-)
+    localStorage.removeItem('session_token');
+    return(
+     <Navigate to="/"/>
+    )
 };
 
-export default MotorcycleForm;
+export default Logout;

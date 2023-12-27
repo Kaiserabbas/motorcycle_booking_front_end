@@ -1,5 +1,5 @@
 .mainUi {
-    margin: 1rem;
+    margin-bottom: 1rem;
     display: grid;
     grid-template-columns: 15fr 85fr;
     grid-template-rows: 100fr;
@@ -11,7 +11,7 @@
 }
 
 .mainBody {
-    margin-top: 6rem;
+    margin-top: 2rem;
     align-items: center;
 }
 
@@ -21,7 +21,7 @@
 
 .buttonContainerLeft,
 .buttonContainerRight {
-background-color: rgba(15, 227, 15, 0.951);
+background-color: #97BF11;
 padding: 1.5rem 2rem 1.5rem 2rem;
 }
 
@@ -58,9 +58,22 @@ padding: 1.5rem 2rem 1.5rem 2rem;
     margin-top: 1.5rem;
 }
 .motorcyclesContainer {
-    margin-top: 8rem;
+    margin-top: 4rem;
     width: 100%;
     display: flex;
     gap: 1rem;
     justify-content: space-around;
+}
+
+#leftIcon,
+#rightIcon{
+transform: scale(2.2);
+}
+
+#leftIcon{
+    padding-left: 1.2rem;
+}
+
+#rightIcon{
+    padding-right: 1.2rem;
 }

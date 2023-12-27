@@ -1,0 +1,13 @@
+.reserveContainer {
+    background-image: url('../img/VESPA_YELLOW.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 1000px;
+    
+}
+
+.reserveDiv {
+    background-color: #97BF11;
+    height: 100%;
+    opacity: 0.8;
+}

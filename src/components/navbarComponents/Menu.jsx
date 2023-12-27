@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Menu = ()=>{
   const [isVisible, setIsVisible] = useState(true);
@@ -21,45 +21,60 @@ const Menu = ()=>{
     return(
     <ul className="navList flexV">
           <li>
-      <Link
+      <NavLink
         to="/motorcycles"
-        className={activeLink === "/motorcycle" ? "active" : ""}
-        onClick={() => handleLinkClick("/motorcycle")}
+        // onClick={() => handleLinkClick("/motorcycle")}
+        activeClassName="active-link"
       >
         Motorcycles
-      </Link>
+      </NavLink>
     </li>
 
           <li>
-      <Link
+      <NavLink
         to="/reserve"
         className={activeLink === "/reservation" ? "active" : ""}
         onClick={() => handleLinkClick("/reservation")}
       >
       Reserve
-      </Link>
+      </NavLink>
     </li>
 
-
     <li>
-      <Link
+      <NavLink
         to="/reservations"
         className={activeLink === "#" ? "active" : ""}
         onClick={() => handleLinkClick("#")}
       >
       My reservations
-      </Link>
+      </NavLink>
     </li>
+    {JSON.parse(localStorage.getItem('session_token')).user.admin &&(
+      <>
     <li>
-      <Link
+      <NavLink
         to="/motorcycle"
         className={activeLink === "#" ? "active" : ""}
         onClick={() => handleLinkClick("#")}
       >
       Add motorcycle
-      </Link>
+      </NavLink>
     </li>
+    
+      <li>
+      <NavLink
+        to="/delete"
+        className={activeLink === "#" ? "active" : ""}
+        onClick={() => handleLinkClick("#")}
+      >
+      Delete motorcycle
+      </NavLink>
+    </li>
+    </>
+    )}
 
+    {/* {JSON.parse(localStorage.getItem('session_token')).user.admin
+    &&(
     <li>
       <Link
         to="/delete"
@@ -69,15 +84,16 @@ const Menu = ()=>{
       Delete motorcycle
       </Link>
     </li>
+    )} */}
 
     <li>
-      <Link
-        to="/delete"
+      <NavLink
+        to="/logout"
         className={activeLink === "#" ? "active" : ""}
         onClick={() => handleLinkClick("#")}
       >
       Logout
-      </Link>
+      </NavLink>
     </li>
   </ul>
   );

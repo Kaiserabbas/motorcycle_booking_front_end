@@ -1,0 +1,21 @@
+.loginContainer {
+    margin-top: 8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
+gap: 2rem;
+}
+
+.formContainer div {
+gap: 0.4rem;
+}
+
+.formContainer div input {
+    padding: 1rem;
+}
+
+.formContainer div button {
+    padding: 1rem;
+}

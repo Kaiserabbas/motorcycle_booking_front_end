@@ -1,11 +1,11 @@
 import '../style/motorcycle.css';
-import vespa from '../img/peg-perego-vespa-12v-2.jpg'
+import vespa from '../img/whitevespa.png'
 
-const Motorcycle =()=>{
+const Motorcycle =({path})=>{
     return(
         <div className="motorcycleItem">
             <div className='motorcycleItemPicture'>
-                <img src={vespa} alt="Vespa" srcset="Vespa MOta" />
+                <img src={path} alt="Vespa" srcset="Vespa MOta" />
             </div>
 
             <div className='motorcycleItemNameModel flexH'>

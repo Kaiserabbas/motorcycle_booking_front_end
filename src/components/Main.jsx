@@ -9,7 +9,6 @@ const Main = ()=> {
             <LeftButton/>
             <Body/>
             <RightButton/>
-
         </main>
     )
 }
