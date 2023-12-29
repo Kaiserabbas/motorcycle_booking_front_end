@@ -7,10 +7,8 @@ import '../style/NavBar.css'
 const NavBar = () => {
   return (
     <nav className="navContainer">
-      <div className="navBody flexV">
       <Title/>
       <Menu/>
-      </div>
       <Footer/>
     </nav>
   );

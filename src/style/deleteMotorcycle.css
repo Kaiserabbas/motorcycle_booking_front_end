@@ -1,0 +1,91 @@
+.deleteMotorcycleContainer {
+  height: 100%;
+}
+
+.deleteMotorcycleContainer h1 {
+  text-align: center;
+  padding-top: 3rem;
+  text-transform: uppercase;
+}
+
+.motorcyclesItemsContainer {
+  margin-top: 3rem;
+}
+
+.motorcycleToDelete {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  justify-content: space-between;
+  border: 1px dashed #97BF11;
+  align-items: center;
+  margin: 0 1rem 0 1rem;
+  transition: all 1s 1s ease-in-out;
+}
+
+.motorcycleToDelete:hover{
+  background-color: #a8c548;
+  color: white;
+  cursor: pointer;
+
+}
+
+.motorcycleToDelete .flexV button {
+  background-color: red;
+  color: white;
+  border: transparent;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.deleteModalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:98%;
+  height: 96%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  z-index: 100;
+  border: 1px solid #97BF11;
+  border-radius: 16px;
+  margin: 1rem;
+}
+
+.confirmationButtonsContainer {
+  margin-top: 2rem;
+  gap: 2rem;
+}
+.confirmationButtonsContainer button {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  cursor: pointer;
+}
+
+#btnYes,
+#btnNo {
+  padding: 0.8rem 2rem  0.8rem 2rem;
+  border-radius: 8px;
+}
+
+#btnYes{
+  background-color:#97BF11;
+ 
+}
+
+#btnNo{
+  background-color:red;
+}
+
+.modalBtn {
+  color: white;
+  border: transparent;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hideComponent {
+  display: none;
+  }

@@ -1,8 +1,7 @@
 .app {
   display: grid;
-  grid-template-rows: auto;
+  grid-template-rows: inherit;
   grid-template-columns: auto;
-  /* height: 60rem; */
 }
 
 .flexV{
@@ -34,4 +33,11 @@
 #infoLogin{
   margin-top: 1rem;
 text-align: center;
+}
+
+.appContainer {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 15fr 85fr;
+  grid-template-rows: 100fr;
 }

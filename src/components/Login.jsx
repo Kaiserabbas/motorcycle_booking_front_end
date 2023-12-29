@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import '../style/login.css';
 import axios from "axios";
 import { Navigate, useNavigate } from 'react-router-dom';
+import { login_path } from '../urls';
 
-// const navigateTo=(path)=>{
-//     return(
-//         <Navigate to ={path}/>
-//     )
-// }
+
 
 const Login=()=>{
     const [credential,setCredential]=useState({email:'',password:''});
@@ -16,8 +13,8 @@ const Login=()=>{
 
     const formHandler= async (e)=>{
         e.preventDefault();
-        const user={user:{email: credential.email, password: credential.password}}
-        const res= await axios.post("http://localhost:3000/api/v1/login",user);
+        const user={user:{email: credential.email, password: credential.password}};
+        const res= await axios.post(login_path,user);
         const data=res.data;
         if(data?.success){
             localStorage.setItem('session_token',JSON.stringify({user:data.user,token:data.token}));
@@ -30,7 +27,6 @@ const Login=()=>{
         if(data.error){
             setLoged(data.message);
         }
-        console.log(data);
     }    
 
     // if(loged&&JSON.parse(localStorage.getItem('session_token'))?.token){return <Navigate to="/motorcycles"/> }

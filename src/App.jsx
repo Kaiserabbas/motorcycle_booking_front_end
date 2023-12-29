@@ -12,10 +12,13 @@ import Logout from "./components/Logout";
 import Signup from "./components/Signup";
 import NotFound from "./components/NotFound";
 import MotorcycleDetails from "./components/MotorcycleDetails";
+import NavBar from "./components/NavBar";
 
 const App =()=>{
   return(
+    <>
     <div className="app">
+      <div id="mainContainer">
       <Routes>
         <Route exact path="/" element={<Login />} />
         <Route exact path="/login" element={<Login />} />
@@ -29,7 +32,9 @@ const App =()=>{
         <Route path="/logout" element={<Logout/>} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
+      </div>
     </div>
+    </>
   )
 }
 

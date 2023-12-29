@@ -41,3 +41,22 @@
 .motorcycleItemLinks {
     margin-top: 1rem;
 }
+
+.motorcycleForm {
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    margin: 2rem 1rem 1rem 1rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.buttonContainer{
+    padding-top: 1.5rem;
+}
+
+.buttonContainer button {
+    background-color:#97BF11;
+    color: white;
+    padding: 0.8rem 2rem  0.8rem 2rem;
+    border-radius: 8px;
+}

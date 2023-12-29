@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer=()=>{
     return(
-        <footer className="flexV">
+        <footer className="footerNav flexV">
         <ul className="icons flexH">
           <li>
             <i className="fab fa-google"></i>
@@ -17,7 +17,7 @@ const Footer=()=>{
             <i className="fab fa-pinterest"></i>
           </li>
         </ul>
-        <p>c 2015 PLAGGIO PIVA</p>
+        <p className="copy">c 2015 PLAGGIO PIVA</p>
         </footer>
     )
 };

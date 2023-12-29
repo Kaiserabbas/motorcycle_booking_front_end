@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { users_path } from "../urls";
 
 const Signup=()=>{
     const [newUser,setNewUser]=useState({
@@ -13,7 +14,7 @@ const Signup=()=>{
     const formHandler= async (e)=>{
         e.preventDefault();
         try {
-            const result= await axios.post("http://localhost:3000/api/v1/users/",{user:{...newUser}});
+            const result= await axios.post(users_path,{user:{...newUser}});
             setMessage({success:true,message:["created successfully!"]});
             console.log(result.data);
         } catch (error) {
@@ -56,7 +57,7 @@ const Signup=()=>{
         <p id="infoLogin"> If you already have an Account please consider to <a href="/login">Login</a></p>
 
         <div className="flexV infoContainer">
-        {message && message?.message.map((sms)=>(<p className={(message?.success)?'success':'error'}>{sms}</p>))}
+        { message && message?.message.map((sms)=>(<p className={(message?.success)?'success':'error'}>{sms}</p>))}
         </div>
         </section>
     );

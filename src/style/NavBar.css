@@ -3,6 +3,7 @@ justify-content: center;
 align-items: center;
 padding-left: 2rem;
 padding-right: 2rem;
+margin-top: -1rem;
 }
 
 .titleContainer img{
@@ -24,24 +25,20 @@ li {
 .navigation {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: space-between;
   border: solid black 1px;
 }
 
 .navList {
-  margin-top: -2rem;
-  justify-content: space-between;
+  margin-top: 2rem;
   gap: 2rem;
   text-transform: uppercase;
 }
 
 .navList li {
   display: flex;
-  /* background-color:#97BF11; */
-  /* padding: 0.8rem;
-  padding-left: 1.5rem; */
-  margin-left: 0.9rem;
+
+  margin-left: 1rem;
 }
 
 
@@ -53,34 +50,26 @@ li {
 
 .navigation.hidden {
   transform: translateX(-100%);
-  /* Move the navigation outside the viewport */
 }
 
-.navContainer {
+/* .navContainer {
   display: flex;
   flex-direction: column;
   border-right: 2px solid rgba(207, 196, 196, 0.431);
   justify-content: space-between;
+} */
+
+.navContainer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 15fr 70fr 15fr;
+  border-right: 2px solid rgba(207, 196, 196, 0.431);
 }
 
 .navBody{
-  margin-top: 2rem;
+  margin-top: 1rem;
   gap: 8rem;
 }
-
-.toggler {
-  padding-top: 85vh;
-}
-
-.right {
-  margin-left: -190px;
-}
-
-a {
-  text-decoration: none;
-}
-
-
 
 .navList li a{
   color: black;
@@ -95,19 +84,23 @@ a {
   padding-left: 1.5rem;
 }
 
-footer{
+.footerNav{
+  margin-top: 2rem;
   justify-content: center;
-  align-items: center;
-  padding-bottom: 1rem;
+  padding: 0.5rem;
 }
 
-footer ul {
-  gap: 1rem;
+.footerNav ul {
+  gap: 15px;
   justify-content: center;
-  align-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 footer ul li {
   cursor: pointer;
+}
+
+.copy {
+  margin-top: 1rem;
+  text-align: center;
 }

@@ -73,19 +73,6 @@ const Menu = ()=>{
     </>
     )}
 
-    {/* {JSON.parse(localStorage.getItem('session_token')).user.admin
-    &&(
-    <li>
-      <Link
-        to="/delete"
-        className={activeLink === "#" ? "active" : ""}
-        onClick={() => handleLinkClick("#")}
-      >
-      Delete motorcycle
-      </Link>
-    </li>
-    )} */}
-
     <li>
       <NavLink
         to="/logout"

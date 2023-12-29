@@ -1,17 +1,17 @@
 .mainUi {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     display: grid;
     grid-template-columns: 15fr 85fr;
-    grid-template-rows: 100fr;
+    height: 970px;
 }
 
 .mainContainer {
     display: grid;
-    grid-template-columns: 7fr 86fr 7fr;
+    grid-template-columns: 6fr 88fr 6fr;
 }
 
 .mainBody {
-    margin-top: 2rem;
+    margin-top: 10rem;
     align-items: center;
 }
 
@@ -31,6 +31,7 @@ padding: 1.5rem 2rem 1.5rem 2rem;
     cursor: pointer;
     background: transparent;
     color: white;
+    transition: all 1s 2s;
 }
 
 .buttonContainerLeft {
