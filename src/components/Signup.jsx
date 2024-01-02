@@ -23,7 +23,8 @@ const Signup=()=>{
     }
 
     return(
-        <section className="signupContainer flexV">
+        <section className="loginContainer flexV">
+            <div className="loginDiv">
         <form  onSubmit={(e)=>{formHandler(e)}} className='formContainer flexV'>
             <div className='flexV'>
                 <label htmlFor="name">Full Name</label>
@@ -48,17 +49,22 @@ const Signup=()=>{
                         } />
             </div>
 
-            <div>
-                <button onClick={()=>{
+            <div className="loginButtons flexH">
+                <button id="signUp" onClick={()=>{
                     console.log(newUser);
                 }}>Sign up</button>
+                Or
+                <a href="/login">
+                <button type="button">Login</button>
+                </a>
+
             </div>
         </form>
-        <p id="infoLogin"> If you already have an Account please consider to <a href="/login">Login</a></p>
-
-        <div className="flexV infoContainer">
-        { message && message?.message.map((sms)=>(<p className={(message?.success)?'success':'error'}>{sms}</p>))}
+<div className="flexV infoContainer">
+{ message && message?.message.map((sms)=>(<p className={(message?.success)?'success':'error'}>{sms}</p>))}
+</div>
         </div>
+
         </section>
     );
 
