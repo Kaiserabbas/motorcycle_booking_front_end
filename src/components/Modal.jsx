@@ -24,12 +24,13 @@ const deleteMotorcycle=async ()=>{
 const DeleteModal=()=>{
     const [toDelete,setToDelete]=useState(1); 
 return(
-    <div className="deleteModalContainer flexV hideComponent" id="deleteModal" onKeyDown={(event)=>{
+    <div className="modalContainer hideComponent flexV" id="deleteModal" onKeyDown={(event)=>{
         if(event.key==='Escape'){
             hideModal();
         }
     }} tabIndex={0}>
-        <h1>Are you Sure ?</h1>
+    <div className="deleteModalContainer flexV"  >
+        <h3>Are you Sure you want delete this Motorcycle ?</h3>
         <div className="confirmationButtonsContainer flexH">
             <button id="btnYes" className="modalBtn" onClick={deleteMotorcycle}>YES</button>
             <button id="btnNo" className="modalBtn" onClick={()=>{
@@ -37,6 +38,7 @@ return(
             }}>NO</button>
         </div>
     </div>
+</div>
 )
 };
 
