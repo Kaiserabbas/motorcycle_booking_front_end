@@ -5,6 +5,8 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import { login_path } from '../urls';
 
 
+let  res= undefined;
+let dataAxios=undefined;
 
 const Login=()=>{
     const [credential,setCredential]=useState({email:'',password:''});
@@ -14,18 +16,28 @@ const Login=()=>{
     const formHandler= async (e)=>{
         e.preventDefault();
         const user={user:{email: credential.email, password: credential.password}};
-        const res= await axios.post(login_path,user);
-        const data=res.data;
-        if(data?.success){
-            localStorage.setItem('session_token',JSON.stringify({user:data.user,token:data.token}));
+        try{
+            res= await axios.post(login_path,user);
+            dataAxios=res.data;
+        }
+        catch(error){
+            if(error.code==="ERR_NETWORK"){
+                setLoged(error.message);
+            }
+        }
+
+
+
+        if(dataAxios?.success){
+            localStorage.setItem('session_token',JSON.stringify({user:dataAxios.user,token:dataAxios.token}));
         }
 
         if(localStorage.getItem('session_token')){
-            setLoged(data.message);
+            setLoged(dataAxios.message);
         }
 
-        if(data.error){
-            setLoged(data.message);
+        if(dataAxios?.error){
+            setLoged(dataAxios.message);
         }
     }    
 
@@ -33,6 +45,7 @@ const Login=()=>{
     if(JSON.parse(localStorage.getItem('session_token'))?.token)return(<Navigate to="/motorcycles"/>);
     return(
         <section className='loginContainer flexV'>
+            <div className='loginDiv'>
         <form  method="post" className='formContainer flexV'>
             <div className='flexV'>
                 <label htmlFor="email">Email</label>
@@ -46,13 +59,14 @@ const Login=()=>{
                 password:e.target.value})}} required/>
             </div>
 
-            <div>
-                <button onClick={formHandler} role='button' type='submit'>Login</button>
-                <button onClick={()=>{navegate('/signup')}} role='button' type='button'>Signup</button>
-                <br />
-                {loged &&(<p>{loged}</p>)}
+            <div className='loginButtons flexH'>
+                <button onClick={formHandler} role='button' type='submit' id='loginBtn'>Login</button>
+                Or
+                <button onClick={()=>{navegate('/signup')}} role='button' type='button'>Sign up</button>
             </div>
         </form>
+        </div>
+        {loged &&(<p className='infoParagraph'>{loged}</p>)}
         </section>
     );
 };

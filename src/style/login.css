@@ -1,7 +1,16 @@
 .loginContainer {
-    margin-top: 8rem;
+    height: 100vh;
     justify-content: center;
-    align-items: center;
+    background-image: url('../img/yellowVespa.webp');
+    background-position: 700px;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+.loginDiv{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 .formContainer {
@@ -13,9 +22,64 @@ gap: 0.4rem;
 }
 
 .formContainer div input {
-    padding: 1rem;
+    padding: 0.7rem;
+    border-radius: 5px;
 }
 
-.formContainer div button {
+select {
+    padding: 0.7rem;
+    border-radius: 5px;
+  }
+
+  .loginButtons {
+    gap: 8px;
+    align-items: center;
+  }
+
+  .infoParagraph {
+    background-color: rgb(207, 207, 112);
     padding: 1rem;
-}
+    margin-top: 1rem;
+    text-align: center;
+    align-self: center;
+    border-radius: 16px;
+  }
+
+  #loginBtn{
+    background-color:#97BF11;
+    color:white;
+  }
+
+  #logoutLi{
+    cursor: pointer;
+    color: black;
+  }
+
+  .logoutingContainer {
+    height: 20%;
+    background-color: white;
+    border: 1px solid #96bf119a;
+    /* padding-left: 1rem; */
+    padding-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: -3rem 0.2rem 0.2rem 0.2rem;
+    gap: 2rem;
+  }
+
+  .logoutingContainer p{
+    color: black;
+  }
+  .logoutBtn {
+    padding: 0.8rem;
+    color: white;
+  }
+
+  .logoutButtonContainer {
+    gap: 1rem;
+  }
+
+  #signUp {
+    background-color:#97BF11;
+    color: white;
+  }
