@@ -1,13 +1,83 @@
 .reserveContainer {
-    background-image: url('../img/VESPA_YELLOW.jpg');
     background-size: 100%;
-    background-repeat: no-repeat;
-    height: 1000px;
-    
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-image: url('../img/VESPA_YELLOW.jpg');
+    color: white;
 }
 
 .reserveDiv {
     background-color: #97BF11;
-    height: 100%;
-    opacity: 0.8;
+    width: 100%;
+    padding: 0.5rem 6rem 0 6rem; 
+    color: white;
 }
+
+.reserveContainer header {
+    background-color: #97BF11;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 2rem 0.7rem 2rem;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.glassContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    color: #97BF11;
+    border-radius: 16px;
+}
+
+#glass{
+transform: rotateY(180deg);
+}
+
+.hide {
+    display: none;
+}
+
+.reseveBodyContainer {
+    height: 100%;
+    background-color: #97BF11;
+    opacity: 0.9;
+}
+
+.reseverNavbarContainer .navContainer .navList .active {
+    background-color:black;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem;
+    padding-left: 1.5rem;
+  }
+ 
+  .reseverNavbarContainer {
+    width: 21%;
+  }
+
+  .reserveTime {
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .reserveTime .flexV input {
+    padding: 0.7rem;
+  }
+  
+  .reserveTime .flexV input[type="number"] {
+    padding: 0.8rem;
+    width: 100%;
+  }
+
+  .reseverNavbarContainer .navContainer .footerNav{
+    color: black;
+  }
+  

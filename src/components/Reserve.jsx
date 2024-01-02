@@ -1,44 +1,38 @@
 import { Navigate } from "react-router-dom";
 import '../style/reserve.css';
+import NavBar from "./NavBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faMagnifyingGlass, faXmark} from "@fortawesome/free-solid-svg-icons";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { useState } from "react";
+import FormReserve from "./FormReserve";
 
+library.add(faXmark,faBars);
 
 const Reserve=()=>{
+    const [icon,setIcon]=useState("bars");
     if(!JSON.parse(localStorage.getItem('session_token'))?.token)return(<Navigate to="/"/>);
     return(
-        <div className="reserveContainer flexV">
+        <section className="reserveContainer flexV">
+            <header className="flexH">
+            <FontAwesomeIcon icon={icon}  onClick={()=>{
+                (icon==='bars')?(setIcon('xmark')):(setIcon('bars'));
+                document.querySelector('.reseverNavbarContainer').classList.toggle('hide')
+            }}/>
+
+            <div className="glassContainer">
+            <FontAwesomeIcon icon={faMagnifyingGlass} id="glass"/>
+            </div>
+            </header>
+            <div className="reseveBodyContainer flexH">
+                <section className="reseverNavbarContainer hide">
+            <NavBar />            
+                </section>
             <div className="reserveDiv">
-            <form  onSubmit={(e)=>{formHandler(e)}} className='formContainer flexV'>
-            <div className='flexV'>
-                <label htmlFor="name">Full Name</label>
-                <input type="text" name="name" id="name" onChange={(e)=>{
-                    if(e.target.value.length>=2){
-                        setNewUser({...newUser,
-                        name:e.target.value})}}
-                    }
-                 minLength={2}/>
+            <FormReserve/>
             </div>
-
-            <div className='flexV'>
-                <label htmlFor="email">Email</label>
-                <input type="email" name="email" id="email" onChange={(e)=>{setNewUser({...newUser,
-                email:e.target.value})}}  />
             </div>
-
-            <div className='flexV'>
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" id="password" onChange={(e)=>{
-                        setNewUser({...newUser,password:e.target.value})}
-                        } />
-            </div>
-
-            <div>
-                <button onClick={()=>{
-                    console.log(newUser);
-                }}>Sign up</button>
-            </div>
-        </form>
-            </div>
-        </div>
+        </section>
     );
 };
 
