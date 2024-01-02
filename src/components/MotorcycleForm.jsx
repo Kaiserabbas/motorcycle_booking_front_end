@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import { useState } from "react";
 import axios from "axios";
 import { motorcles_path, request_header } from "../urls";
+import ItemPreview from "./ItemPreview";
 
 
 
@@ -34,10 +35,10 @@ return(
     <section className="mainUi">
             <NavBar/>
     <div className="addMottorcycleContainer formContainer flexV">
-    <header className="mainBodyHeader flexV">
+    {/* <header className="mainBodyHeader flexV">
         <h1>ADD NEW MOTORCYCLE</h1>
         <hr className='bar' />
-            </header>
+            </header> */}
     <form  onSubmit={(e)=>{
         e.preventDefault();
         // console.log(newMotorcycle);
@@ -93,21 +94,23 @@ return(
         <input type="number" name="bookingPricePerHour" id="bookingPricePerHour" onChange={(e)=>{
                 setNewMotorcycle({...newMotorcycle,
                     bookingPricePerHour:e.target.value})}
-        }  />
+        } step={0.1} min={0}  />
     </div>
 
     <div className='flexV'>
         <label htmlFor="price">Sale Price $</label>
         <input type="number" name="price" id="price" onChange={(e)=>{
                 setNewMotorcycle({...newMotorcycle,
-                    price:e.target.value})}                } />
+                    price:e.target.value})}} step={0.1} min={0} />
     </div>
     
     <div className='flexV'>
         <label htmlFor="imageLink">Image Link</label>
-        <input type="url" name="imageLink" id="imageLink" onChange={(e)=>{
-                setNewMotorcycle({...newMotorcycle,
-                    imageLink:e.target.value})}                } />
+        <input type="url" name="imageLink" id="imageLink"
+
+                     onBlur={(evt)=>{
+                            setNewMotorcycle({...newMotorcycle,imageLink:evt.target.value});
+                        }}/>
     </div>
 
     <div className="buttonContainer">
@@ -116,6 +119,7 @@ return(
         }}>Save</button>
     </div>
 </form>
+<ItemPreview url={newMotorcycle.imageLink}/>
     </div>
     </section>
 )
