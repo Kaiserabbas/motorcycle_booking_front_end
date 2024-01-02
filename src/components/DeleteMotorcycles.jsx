@@ -14,10 +14,6 @@ const DeleteMotorcycles= ()=>{
         <section className="mainUi">
             <NavBar/>
             <div>
-            <header className="mainBodyHeader flexV">
-        <h1>MOTORCYCLES LIST</h1>
-        <hr className='bar' />
-            </header>
             <DeleteItem/>
             <DeleteItem/>
             <DeleteItem/>

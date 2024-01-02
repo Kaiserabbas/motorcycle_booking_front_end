@@ -32,28 +32,27 @@
   background-color: red;
   color: white;
   border: transparent;
-  padding: 0.8rem;
-  border-radius: 8px;
+  border-radius: 16px;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
   cursor: pointer;
 }
 
 .deleteModalContainer {
   position: fixed;
-  top: 0;
-  left: 0;
-  width:98%;
-  height: 96%;
+  width:95%;
+  height: 95%;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.9;
   z-index: 100;
   border: 1px solid #97BF11;
   border-radius: 16px;
-  margin: 1rem;
 }
 
+.deleteModalContainer h3{
+  text-align: center;
+}
 .confirmationButtonsContainer {
   margin-top: 2rem;
   gap: 2rem;
@@ -66,12 +65,11 @@
 #btnYes,
 #btnNo {
   padding: 0.8rem 2rem  0.8rem 2rem;
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
 #btnYes{
   background-color:#97BF11;
- 
 }
 
 #btnNo{
@@ -88,4 +86,11 @@
 
 .hideComponent {
   display: none;
+  }
+
+  .modalContainer {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
   }
