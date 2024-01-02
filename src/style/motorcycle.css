@@ -54,9 +54,47 @@
     padding-top: 1.5rem;
 }
 
-.buttonContainer button {
+.buttonContainer button,
+.reservebuttonContainer button {
     background-color:#97BF11;
     color: white;
     padding: 0.8rem 2rem  0.8rem 2rem;
+    border-radius: 20px;
+}
+
+.reservebuttonContainer button {
+    background-color: white;
+    border-radius: 20px;
+    color: #97BF11;
+}
+
+.itemImagePreview {
+    align-items: flex-end;
+    gap: 2rem;
+    padding-right: 10rem;
+    margin-top: -2rem;
+}
+.itemImagePreviewContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    height: 10rem;
+    width: 14rem;
+}
+
+.itemImagePreviewContainer img {
+    width: 100%;
+    height: 100%;
+    transition: all 1.5s 1.5s ease-in-out;
     border-radius: 8px;
+}
+
+.itemImagePreviewContainer img:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    border-radius: 16px;
+}
+
+.addMottorcycleContainer {
+    margin-top: 1rem;
 }

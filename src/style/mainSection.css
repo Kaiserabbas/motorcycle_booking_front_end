@@ -1,17 +1,16 @@
 .mainUi {
-    /* margin-bottom: 1rem; */
     display: grid;
     grid-template-columns: 15fr 85fr;
-    height: 970px;
+    height: 100vh;
 }
 
 .mainContainer {
     display: grid;
     grid-template-columns: 6fr 88fr 6fr;
+    align-items: center;
 }
 
 .mainBody {
-    margin-top: 10rem;
     align-items: center;
 }
 
@@ -20,9 +19,32 @@
 }
 
 .buttonContainerLeft,
-.buttonContainerRight {
+.buttonContainerRight,
+.noneItemLeft,
+.noneItemRight {
 background-color: #97BF11;
-padding: 1.5rem 2rem 1.5rem 2rem;
+padding: 1rem 0.4rem 1rem 0.4rem;
+}
+
+.buttonContainerLeft,
+.noneItemLeft{
+    justify-content: flex-end;
+}
+
+.buttonContainerRight,
+.noneItemRight{
+    justify-content: flex-start;
+}
+
+
+.noneItemLeft,
+.noneItemRight{
+    background-color: whitesmoke;
+}
+
+.noneItemLeft button,
+.noneItemRight button {
+    background-color: transparent;
 }
 
 .buttonContainerLeft button,
@@ -34,21 +56,24 @@ padding: 1.5rem 2rem 1.5rem 2rem;
     transition: all 1s 2s;
 }
 
-.buttonContainerLeft {
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    margin-left: -1px;
+.buttonContainerLeft,
+.noneItemLeft {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 
-.buttonContainerRight {
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+.buttonContainerRight,
+.noneItemRight {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
 }
 
 .mainBodyHeader {
+    margin-top: -10rem;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    padding-bottom: 2rem;
 }
 
 .mainBodyHeader h1 {
@@ -56,14 +81,14 @@ padding: 1.5rem 2rem 1.5rem 2rem;
 }
 
 .mainBodyHeader hr {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
 }
+
 .motorcyclesContainer {
-    margin-top: 4rem;
     width: 100%;
     display: flex;
-    gap: 1rem;
     justify-content: space-around;
+    height: 250px;
 }
 
 #leftIcon,
@@ -72,9 +97,9 @@ transform: scale(2.2);
 }
 
 #leftIcon{
-    padding-left: 1.2rem;
+    margin-left: 1rem;
 }
 
 #rightIcon{
-    padding-right: 1.2rem;
+    margin-right: 1rem;
 }
