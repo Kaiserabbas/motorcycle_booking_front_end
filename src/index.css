@@ -17,4 +17,7 @@ body {
 button {
   border: transparent;
   cursor: pointer;
+  padding: 0.6rem;
+  padding: 0.8rem 2rem  0.8rem 2rem;
+  border-radius: 16px;
 }

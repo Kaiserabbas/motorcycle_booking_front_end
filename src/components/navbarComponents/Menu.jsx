@@ -1,87 +1,37 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Menu = ()=>{
-  const [isVisible, setIsVisible] = useState(true);
-  const [activeLink, setActiveLink] = useState(null);
-
-  const toggleVisibility = () => {
-     setIsVisible(!isVisible);
-   };
-
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
-
-  // // Use useEffect to ensure that the activeLink state is updated before rendering
-  useEffect(() => {
-  //   // Your logic to handle link activation (e.g., styling updates) can go here
-  }, [activeLink]);
+  const [logouting,setLogouting]=useState(false);
 
     return(
     <ul className="navList flexV">
-          <li>
-      <NavLink
-        to="/motorcycles"
-        // onClick={() => handleLinkClick("/motorcycle")}
-        activeClassName="active-link"
-      >
-        Motorcycles
-      </NavLink>
-    </li>
-
-          <li>
-      <NavLink
-        to="/reserve"
-        className={activeLink === "/reservation" ? "active" : ""}
-        onClick={() => handleLinkClick("/reservation")}
-      >
-      Reserve
-      </NavLink>
-    </li>
-
-    <li>
-      <NavLink
-        to="/reservations"
-        className={activeLink === "#" ? "active" : ""}
-        onClick={() => handleLinkClick("#")}
-      >
-      My reservations
-      </NavLink>
-    </li>
+          <li><NavLink to="/motorcycles"> Motorcycles</NavLink></li>
+          <li><NavLink to="/reserve">Reserve Form</NavLink></li>
+    <li><NavLink to="/reservations">My reservations </NavLink></li>
+    
     {JSON.parse(localStorage.getItem('session_token')).user.admin &&(
       <>
-    <li>
-      <NavLink
-        to="/motorcycle"
-        className={activeLink === "#" ? "active" : ""}
-        onClick={() => handleLinkClick("#")}
-      >
-      Add motorcycle
-      </NavLink>
-    </li>
-    
-      <li>
-      <NavLink
-        to="/delete"
-        className={activeLink === "#" ? "active" : ""}
-        onClick={() => handleLinkClick("#")}
-      >
-      Delete motorcycle
-      </NavLink>
-    </li>
+    <li><NavLink to="/motorcycle">Add motorcycle</NavLink></li>
+      <li><NavLink to="/delete"> Delete motorcycle</NavLink></li>
     </>
     )}
+    <li id="logoutLi" onClick={()=>{
+      setLogouting(true);
+    }}>Logout</li>
+    {logouting &&(
+    <div className="logoutingContainer flexV" onKeyDown={(event)=>{
+      if(event.key==='Escape'){
+        setLogouting(false)
+      }
+  }} tabIndex={0}>
+      <p>Are you Sure?</p>
+      <div className="logoutButtonContainer flexH">
+      <a href="/logout"><button id="btnYes" className="logoutBtn">YES</button></a>
+            <button id="btnNo" className="logoutBtn" onClick={()=>{setLogouting(false)}}>NO</button>
 
-    <li>
-      <NavLink
-        to="/logout"
-        className={activeLink === "#" ? "active" : ""}
-        onClick={() => handleLinkClick("#")}
-      >
-      Logout
-      </NavLink>
-    </li>
+      </div>
+      </div>)}
   </ul>
   );
 };
