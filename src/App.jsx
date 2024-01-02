@@ -13,6 +13,7 @@ import Signup from "./components/Signup";
 import NotFound from "./components/NotFound";
 import MotorcycleDetails from "./components/MotorcycleDetails";
 import NavBar from "./components/NavBar";
+import ModalLogout from "./components/ModalLogout";
 
 const App =()=>{
   return(

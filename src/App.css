@@ -19,7 +19,13 @@
 }
 
 .error {
-  color: red;
+  color:white ;
+  background-color: red;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  align-self: self-start;
+  border-radius: 16px;
 }
 
 .success {
@@ -27,7 +33,8 @@
 }
 
 .infoContainer{
-  margin-top: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 #infoLogin{
@@ -40,4 +47,8 @@ text-align: center;
   display: grid;
   grid-template-columns: 15fr 85fr;
   grid-template-rows: 100fr;
+}
+
+.mainContainer {
+height: 100vh;
 }
