@@ -93,3 +93,24 @@ footer ul li {
   margin-top: 1rem;
   text-align: center;
 }
+
+#logoutLi {
+  background-color: red;
+  text-transform: uppercase;
+}
+
+.logoutingContainer {
+  height: 20%;
+  background-color: white;
+  border: 1px solid #96bf119a;
+  /* padding-left: 1rem; */
+  padding-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: -5rem 0.2rem 0.2rem 0.2rem;
+  gap: 2rem;
+}
+
+.logoutingContainer p{
+  color: black;
+}

@@ -1,40 +1,40 @@
 .reserveContainer {
-    background-size: 100%;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    background-image: url('../img/VESPA_YELLOW.jpg');
-    color: white;
+  background-size: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-image: url('../img/VESPA_YELLOW.jpg');
+  color: white;
 }
 
 .reserveDiv {
-    background-color: #97BF11;
-    width: 100%;
-    padding: 0.5rem 6rem 0 6rem; 
-    color: white;
+  background-color: #97BF11;
+  width: 100%;
+  padding: 0.5rem 6rem 0 6rem; 
+  color: white;
 }
 
 .reserveContainer header {
-    background-color: #97BF11;
-    opacity: 0.9;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.7rem 2rem 0.7rem 2rem;
-    color: white;
-    font-weight: bolder;
-    font-size: 20px;
-    cursor: pointer;
+  background-color: #97BF11;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem 0.7rem 2rem;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .glassContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
-    color: #97BF11;
-    border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  color: #97BF11;
+  border-radius: 16px;
 }
 
 #glass{
@@ -42,42 +42,83 @@ transform: rotateY(180deg);
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .reseveBodyContainer {
-    height: 100%;
-    background-color: #97BF11;
-    opacity: 0.9;
+  height: 100%;
+  background-color: #97BF11;
+  opacity: 0.9;
 }
 
 .reseverNavbarContainer .navContainer .navList .active {
-    background-color:black;
-    color: #fff;
-    text-decoration: none;
-    padding: 0.8rem;
-    padding-left: 1.5rem;
-  }
- 
-  .reseverNavbarContainer {
-    width: 21%;
-  }
+  background-color:black;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem;
+  padding-left: 1.5rem;
+}
 
-  .reserveTime {
-    gap: 2rem;
-    align-items: center;
-  }
+.reseverNavbarContainer {
+  width: 21%;
+}
 
-  .reserveTime .flexV input {
-    padding: 0.7rem;
-  }
-  
-  .reserveTime .flexV input[type="number"] {
-    padding: 0.8rem;
-    width: 100%;
-  }
+.reserveTime {
+  gap: 2.5rem;
+  align-items: center;
+}
 
-  .reseverNavbarContainer .navContainer .footerNav{
-    color: black;
-  }
-  
+.reserveTime .flexV input {
+  padding: 0.7rem;
+}
+
+.reserveTime .flexV input[type="number"],
+#duration {
+  padding: 0.7rem;
+  width: 100%;
+}
+
+.reseverNavbarContainer .navContainer .footerNav{
+  color: black;
+}
+
+.totalToPay {
+  align-self: flex-end;
+}
+
+.totalToPay input {
+  text-align: center;
+  font-weight: bolder;
+}
+
+#toPay {
+  color: black;
+  transition: all 1s ease-in-out;
+  margin-left: 3rem;
+}
+
+#toPay:hover {
+color: rgba(184, 25, 25, 0.829);
+background-color: white;
+cursor: pointer;
+}
+
+.checkContainer label {
+  cursor: pointer;
+
+}
+
+#daysCheckbox {
+  height: 1rem;
+  width: 1rem;
+}
+
+#invalid {
+  color: rgb(122, 18, 18);
+  margin-left: 1rem;
+  background-color: whitesmoke;
+}
+
+#btnSubmitReserve {
+  background-color: blue;
+}

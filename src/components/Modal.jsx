@@ -1,45 +1,44 @@
-import axios from "axios";
-import { useState } from "react";
-import { motorcles_path, request_header } from "../urls";
+import axios from 'axios';
+import { motorclesPath, requestHeader } from '../urls';
 
-const hideModal=()=>{
-    document.querySelector("#deleteModal").classList.add('hideComponent');
-    document.querySelector(".bodyContainer").classList.remove('hiddenScroll');
+const hideModal = () => {
+  document.querySelector('#deleteModal').classList.add('hideComponent');
+  document.querySelector('.bodyContainer').classList.remove('hiddenScroll');
 };
 
-const deleteMotorcycle=async ()=>{
-    try{
-        const result= axios.delete(motorcles_path.concat('/3'),request_header);
-        console.log(result.data);
-        hideModal();
-        alert('apagado com sucesso!')
-    }catch(error){
-        console.log(error);
-    }
-        
-}
+const deleteMotorcycle = async () => {
+  try {
+    const result = axios.delete(motorclesPath.concat('/3'), requestHeader);
+    console.log(result.data);
+    hideModal();
+    alert('apagado com sucesso!');
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-
-
-const DeleteModal=()=>{
-    const [toDelete,setToDelete]=useState(1); 
-return(
-    <div className="modalContainer hideComponent flexV" id="deleteModal" onKeyDown={(event)=>{
-        if(event.key==='Escape'){
+const DeleteModal = () => (
+  <div
+    className="modalContainer hideComponent flexV"
+    id="deleteModal"
+  >
+    <div className="deleteModalContainer flexV">
+      <h3>Are you Sure you want delete this Motorcycle ?</h3>
+      <div className="confirmationButtonsContainer flexH">
+        <button id="btnYes" className="modalBtn" type="button" onClick={deleteMotorcycle}>YES</button>
+        <button
+          id="btnNo"
+          className="modalBtn"
+          type="button"
+          onClick={() => {
             hideModal();
-        }
-    }} tabIndex={0}>
-    <div className="deleteModalContainer flexV"  >
-        <h3>Are you Sure you want delete this Motorcycle ?</h3>
-        <div className="confirmationButtonsContainer flexH">
-            <button id="btnYes" className="modalBtn" onClick={deleteMotorcycle}>YES</button>
-            <button id="btnNo" className="modalBtn" onClick={()=>{
-                hideModal();
-            }}>NO</button>
-        </div>
+          }}
+        >
+          NO
+        </button>
+      </div>
     </div>
-</div>
-)
-};
+  </div>
+);
 
 export default DeleteModal;

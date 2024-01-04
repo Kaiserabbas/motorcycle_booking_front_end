@@ -1,7 +1,6 @@
-import React from "react";
-import Logo from '../../img/logo.webp'
-import { Navigate } from "react-router-dom";
+import React from 'react';
+import Logo from '../../img/logo.webp';
 
-const Title=()=><div className="titleContainer flexH"><img src={Logo} alt="Logo" onClick={()=>{return <Navigate to="/" />}} /></div>
+const Title = () => <div className="titleContainer flexH"><img src={Logo} alt="Logo" /></div>;
 
 export default Title;

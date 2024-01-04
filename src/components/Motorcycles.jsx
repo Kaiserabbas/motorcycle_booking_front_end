@@ -1,14 +1,14 @@
-import React from "react";
-import NavBar from "./NavBar";
-import Main from "./Main";
-import '../style/mainSection.css'
-import { Navigate } from "react-router-dom";
+import React from 'react';
+import { Navigate } from 'react-router-dom';
+import NavBar from './NavBar';
+import Main from './Main';
+import '../style/mainSection.css';
 // import axios from "axios";
 
 // const url = 'http://localhost:3000/api/v1/motorcycles';
 // const tokenObject = JSON.parse(localStorage.getItem('session_token'));
-// const header= {headers: {'Authorization': `Bearer ${tokenObject.token}`,'Content-Type': 'application/json'}}
-
+// const header= {headers: {'Authorization':`Bearer ${tokenObject.token}`,'Content-Type':
+// 'application/json'}}
 // const get= async ()=>{
 //   const res= await axios.get(url,header);
 //   console.log(res.data);
@@ -25,14 +25,14 @@ import { Navigate } from "react-router-dom";
 //   .catch(error => console.error('Error:', error));
 
 const Motorcycles = () => {
-  if(!JSON.parse(localStorage.getItem('session_token'))?.token)return(<Navigate to="/"/>);
+  if (!JSON.parse(localStorage.getItem('session_token'))?.token) return (<Navigate to="/" />);
   return (
     <>
-      {(JSON.parse(localStorage.getItem('session_token'))?.token)&&(
+      {(JSON.parse(localStorage.getItem('session_token'))?.token) && (
         <section className="mainUi">
-        <NavBar/>
-        <Main/>
-      </section>
+          <NavBar />
+          <Main />
+        </section>
       )}
     </>
   );
