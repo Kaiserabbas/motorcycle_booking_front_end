@@ -122,3 +122,9 @@ cursor: pointer;
 #btnSubmitReserve {
   background-color: blue;
 }
+
+.reserveItem {
+  margin: 2rem;
+  gap: 1rem;
+  justify-content: space-between;
+}

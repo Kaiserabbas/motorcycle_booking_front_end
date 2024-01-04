@@ -1,15 +1,10 @@
 import { useState } from 'react';
-import axios from 'axios';
-import { currentUser, requestHeader, reservationsPath } from '../urls';
+import { useDispatch } from 'react-redux';
+import { postReserves } from '../redux/reserveSlice';
+import { currentUser } from '../urls';
 import {
   moneyDisplay, timeCalculation, validateTime1, validateTime2,
 } from '../timeCalc';
-
-const get = async (postData) => {
-  await axios.post(reservationsPath, postData, requestHeader)
-    .then((response) => console.log(response.data))
-    .catch((error) => console.error('Error:', error.response));
-};
 
 const FormReserve = () => {
   const [totalToPay, setTotalToPay] = useState(0);
@@ -29,11 +24,12 @@ const FormReserve = () => {
     date: null,
     city: null,
   });
+  const dispatch = useDispatch();
   return (
     <form
       onSubmit={(element) => {
         element.preventDefault();
-        get(reservation);
+        dispatch(postReserves(reservation));
         element.target.reset();
       }}
       className="formContainer flexV"
