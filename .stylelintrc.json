@@ -14,7 +14,10 @@
         "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
       }
     ],
-    "csstree/validator": true
+    "csstree/validator": true,
+    "no-descending-specificity": [true, { "ignoreSelectors": [":focus"] }],
+    "no-duplicate-selectors": [true, { "ignore": ["#logoutLi"] }],
+    "declaration-block-no-duplicate-properties": [true, { "ignore": ["consecutive-duplicates"] }]
   },
   "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css", "**/*.js", "**/*.jsx"]
 }

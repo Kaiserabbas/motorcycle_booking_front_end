@@ -185,7 +185,7 @@ const MotorcycleForm = () => {
               onChange={(evt) => {
                 // const newText = evt.target.value;
                 // if (newText.length >= 50) {
-                  setNewMotorcycle({ ...newMotorcycle, description: evt.target.value });
+                setNewMotorcycle({ ...newMotorcycle, description: evt.target.value });
                 // }
               }}
               placeholder="Motorcycle Description"
