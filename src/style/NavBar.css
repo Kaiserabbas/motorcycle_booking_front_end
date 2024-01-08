@@ -1,3 +1,86 @@
+.controlVisibility {
+  display: flex;
+}  
+.navContainer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 15fr 70fr 15fr;
+  border-right: 2px solid rgba(207, 196, 196, 0.431);
+  opacity: 0.8;
+  transition: all 1s 0.5s ease-in-out;
+  height: 100vh;
+}
+
+.navContainer .navList .active {
+  background-color: #97BF11;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem;
+  padding-left: 1.5rem;
+}
+
+.logoutingContainer {
+  height: 20%;
+  background-color: white;
+  border: 1px solid #96bf119a;
+  padding-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: -5rem 0.2rem 0.2rem 0.2rem;
+  gap: 2rem;
+}
+
+@media screen and (max-width:768px) {
+  .navContainer {
+    background-color: white;
+    background-image: url("../img/whiteVespa.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    opacity: 1;
+    z-index: 2000;
+    overflow-y: hidden;
+    color: black
+  }
+
+  .navContainer .navList .active {
+    opacity: 0.8;
+  }
+  .navContainer footer {
+  justify-content: center;
+    /* margin-top: 4rem; */
+    /* margin: 4rem 4% 0 4%; */
+    padding: 0.3rem;
+    background-color: #2e3a05;
+    opacity: 0.8;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    /* border-radius: 16px; */
+    color: white;
+  }
+  .controlVisibility {
+    display: none;
+  }  
+  .logoutingContainer {
+    /* height: 20%; */
+    /* background-color: white;
+    border: 1px solid #96bf119a; */
+    /* padding-left: 1rem; */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* margin: -5rem 0.2rem 0.2rem 0.2rem; */
+    gap: 1rem;
+    border-radius: 16px;
+  }
+}
 .titleContainer {
   justify-content: center;
   align-items: center;
@@ -37,21 +120,16 @@ li {
 
 .navList li {
   display: flex;
-
   margin-left: 1rem;
+}
+
+.navList li a {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bolder;
 }
 
 .navigation.hidden {
   transform: translateX(-100%);
-}
-
-.navContainer {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 15fr 70fr 15fr;
-  border-right: 2px solid rgba(207, 196, 196, 0.431);
-  opacity: 0.8;
-  transition: all 1s 0.5s ease-in-out;
 }
 
 .navBody {
@@ -62,14 +140,6 @@ li {
 .navList li a {
   color: black;
   width: 100%;
-}
-
-.navContainer .navList .active {
-  background-color: #97BF11;
-  color: white;
-  text-decoration: none;
-  padding: 0.8rem;
-  padding-left: 1.5rem;
 }
 
 .footerNav {
@@ -99,18 +169,15 @@ footer ul li {
   text-transform: uppercase;
 }
 
-.logoutingContainer {
-  height: 20%;
-  background-color: white;
-  border: 1px solid #96bf119a;
-  /* padding-left: 1rem; */
-  padding-top: 1rem;
-  align-items: center;
-  justify-content: center;
-  margin: -5rem 0.2rem 0.2rem 0.2rem;
-  gap: 2rem;
-}
-
 .logoutingContainer p{
   color: black;
+}
+
+#logoBtn {
+  background-color: transparent;
+  border: transparent;
+}
+
+#hamburrguerIcon {
+  /* background-color: red; */
 }
