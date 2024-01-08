@@ -21,11 +21,10 @@
   transition: all 1s 1s ease-in-out;
 }
 
-.motorcycleToDelete:hover{
+.motorcycleToDelete:hover {
   background-color: #a8c548;
   color: white;
   cursor: pointer;
-
 }
 
 .motorcycleToDelete .flexV button {
@@ -39,24 +38,26 @@
 
 .deleteModalContainer {
   position: fixed;
-  width:95%;
+  width: 95%;
   height: 95%;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 7000;
   border: 1px solid #97BF11;
   border-radius: 16px;
 }
 
-.deleteModalContainer h3{
+.deleteModalContainer h3 {
   text-align: center;
 }
+
 .confirmationButtonsContainer {
   margin-top: 2rem;
   gap: 2rem;
 }
+
 .confirmationButtonsContainer button {
   padding: 0.5rem 2rem 0.5rem 2rem;
   cursor: pointer;
@@ -64,16 +65,16 @@
 
 #btnYes,
 #btnNo {
-  padding: 0.8rem 2rem  0.8rem 2rem;
+  padding: 0.8rem 2rem 0.8rem 2rem;
   border-radius: 16px;
 }
 
-#btnYes{
-  background-color:#97BF11;
+#btnYes {
+  background-color: #97BF11;
 }
 
-#btnNo{
-  background-color:red;
+#btnNo {
+  background-color: red;
 }
 
 .modalBtn {
@@ -86,11 +87,18 @@
 
 .hideComponent {
   display: none;
-  }
+}
 
-  .modalContainer {
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.9;
+.modalContainer {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+@media screen and (min-width:768px) {
+  .motorcycleItemListContainer {
+    height: inherit;
+    overflow-y: scroll;
   }
+}

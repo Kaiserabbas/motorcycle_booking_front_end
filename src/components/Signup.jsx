@@ -1,31 +1,32 @@
-import axios from 'axios';
 import { useState } from 'react';
-import { usersPath } from '../urls';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { cleanMessage, signupUser } from '../redux/userSlice';
 
 const Signup = () => {
+  const dispatch = useDispatch();
+  const navegate = useNavigate();
   const [newUser, setNewUser] = useState({
     name: '',
     email: '',
     password: '',
   });
 
-  const [message, setMessage] = useState(false);
-
-  const formHandler = async (e) => {
-    e.preventDefault();
-    try {
-      const result = await axios.post(usersPath, { user: { ...newUser } });
-      setMessage({ success: true, message: ['created successfully!'] });
-      console.log(result.data);
-    } catch (error) {
-      setMessage({ error: true, message: error.response.data.message });
-    }
-  };
+  const {
+    information,
+  } = useSelector((state) => state.user);
 
   return (
     <section className="loginContainer flexV">
       <div className="loginDiv">
-        <form onSubmit={(e) => { formHandler(e); }} className="formContainer flexV">
+        <form
+          onSubmit={(el) => {
+            el.preventDefault();
+            dispatch(signupUser(newUser));
+            el.target.reset();
+          }}
+          className="formContainer flexV"
+        >
           <div className="flexV">
             <label htmlFor="name">
               Full Name
@@ -34,6 +35,7 @@ const Signup = () => {
                 type="text"
                 name="name"
                 id="name"
+                required
                 onChange={(e) => {
                   if (e.target.value.length >= 2) {
                     setNewUser({
@@ -55,6 +57,7 @@ const Signup = () => {
                 type="email"
                 name="email"
                 id="email"
+                required
                 onChange={(e) => {
                   setNewUser({
                     ...newUser,
@@ -73,6 +76,7 @@ const Signup = () => {
                 type="password"
                 name="password"
                 id="password"
+                required
                 onChange={(e) => {
                   setNewUser({ ...newUser, password: e.target.value });
                 }}
@@ -83,25 +87,38 @@ const Signup = () => {
           <div className="loginButtons flexH">
             <button
               id="signUp"
-              onClick={() => {
-                console.log(newUser);
-              }}
               type="submit"
             >
               Sign up
             </button>
             Or
-            <a href="/login">
-              <button type="button">Login</button>
-            </a>
 
+            <button
+              onClick={() => {
+                dispatch(cleanMessage());
+                navegate('/login');
+              }}
+              type="button"
+            >
+              Login
+            </button>
           </div>
         </form>
         <div className="flexV infoContainer">
-          {message && message?.message.map((sms, index) => (<p key={{ index }} className={(message?.success) ? 'success' : 'error'}>{sms}</p>))}
+          {
+            information && Array.isArray(information) ? information.map((sms) => (
+              <p
+                key={(1997 + Math.sin(Math.random() * 10))}
+                className="error"
+              >
+                {sms}
+              </p>
+            )) : (
+              information && (<p className="infoParagraph">{information}</p>)
+            )
+          }
         </div>
       </div>
-
     </section>
   );
 };

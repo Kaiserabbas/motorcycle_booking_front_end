@@ -1,40 +1,21 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import NavBar from './NavBar';
 import Main from './Main';
 import '../style/mainSection.css';
-// import axios from "axios";
-
-// const url = 'http://localhost:3000/api/v1/motorcycles';
-// const tokenObject = JSON.parse(localStorage.getItem('session_token'));
-// const header= {headers: {'Authorization':`Bearer ${tokenObject.token}`,'Content-Type':
-// 'application/json'}}
-// const get= async ()=>{
-//   const res= await axios.get(url,header);
-//   console.log(res.data);
-// }
-
-// axios.get(url, {
-//   headers: {
-//     'Authorization': `Bearer ${token}`,
-//     'Content-Type': 'application/json',
-//     // Other headers as needed
-//   },
-// })
-//   .then(response => console.log(response.data))
-//   .catch(error => console.error('Error:', error));
 
 const Motorcycles = () => {
-  if (!JSON.parse(localStorage.getItem('session_token'))?.token) return (<Navigate to="/" />);
+  const currentUser = useSelector((state) => state.user.currentUser);
+  if (!currentUser) return (<Navigate to="/login" />);
   return (
     <>
-      {(JSON.parse(localStorage.getItem('session_token'))?.token) && (
-        <section className="mainUi">
-          <NavBar />
-          <Main />
-        </section>
-      )}
+      <section className="mainUi">
+        <NavBar />
+        <Main />
+      </section>
     </>
   );
 };
+
 export default Motorcycles;

@@ -5,11 +5,12 @@ import Footer from './navbarComponents/Footer';
 import '../style/NavBar.css';
 
 const NavBar = () => (
-  <nav className="navContainer">
-    <Title />
-    <Menu />
-    <Footer />
-  </nav>
+  <>
+    <nav className="navContainer controlVisibility">
+      <Title />
+      <Menu />
+      <Footer />
+    </nav>
+  </>
 );
-
 export default NavBar;
