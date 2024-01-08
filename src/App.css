@@ -2,16 +2,17 @@
   display: grid;
   grid-template-rows: inherit;
   grid-template-columns: auto;
+
   /* background-color: rgb(161, 55, 73); */
   height: inherit;
 }
 
-.flexV{
+.flexV {
   display: flex;
   flex-direction: column;
 }
 
-.flexH{
+.flexH {
   display: flex;
 }
 
@@ -21,7 +22,7 @@
 }
 
 .error {
-  color:white ;
+  color: white;
   background-color: red;
   padding: 0.5rem;
   margin-top: 0.5rem;
@@ -31,17 +32,17 @@
 }
 
 .success {
-  color: #97BF11;
+  color: #97bf11;
 }
 
-.infoContainer{
+.infoContainer {
   margin-top: 1rem;
   flex-wrap: wrap;
 }
 
-#infoLogin{
+#infoLogin {
   margin-top: 1rem;
-text-align: center;
+  text-align: center;
 }
 
 .appContainer {
@@ -52,7 +53,7 @@ text-align: center;
 }
 
 .mainContainer {
-height: 100vh;
+  height: 100vh;
 }
 
 .messageContainer {
@@ -66,7 +67,7 @@ height: 100vh;
   border-radius: 20px;
 }
 
-.messageContainer .content{
+.messageContainer .content {
   padding: 0.3rem;
   color: white;
 }
@@ -81,6 +82,7 @@ height: 100vh;
   z-index: 6000;
   display: block;
 }
+
 .infoContainer {
   margin-top: 8rem;
   padding: 1rem;
@@ -90,7 +92,8 @@ height: 100vh;
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width:768px) {
+
+@media screen and (min-width: 768px) {
   .hamburguerContainer {
     display: none;
   }
@@ -102,9 +105,8 @@ height: 100vh;
     justify-content: center;
     align-items: center;
   }
+
   /* .controlVisibility {
     display: block;
   } */
-
-
 }

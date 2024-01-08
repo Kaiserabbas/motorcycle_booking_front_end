@@ -1,9 +1,10 @@
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .loginContainer {
     background-image: url('../img/giorniVespa.webp');
     background-position: 700px;
     background-size: 70%;
   }
+
   .logoutButtonContainer {
     gap: 1rem;
   }
@@ -55,13 +56,14 @@
 
 .formContainer div textarea:focus,
 select:focus {
-  border-color: #97BF11;
+  border-color: #97bf11;
   outline-style: dotted;
   box-shadow: 2px 2px 5px 0 #748d0f88;
 }
+
 .formContainer div input:focus,
 select:focus {
-  border-color: #97BF11;
+  border-color: #97bf11;
   outline-style: dotted;
   box-shadow: 2px 2px 5px 0 #748d0f88;
 }
@@ -87,7 +89,7 @@ select {
 }
 
 #loginBtn {
-  background-color: #97BF11;
+  background-color: #97bf11;
   color: white;
 }
 
@@ -102,9 +104,8 @@ select {
   background-color: red;
 }
 
-
 #signUp {
-  background-color: #97BF11;
+  background-color: #97bf11;
   color: white;
 }
 

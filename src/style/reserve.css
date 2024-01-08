@@ -2,7 +2,9 @@
   background-size: 100%;
   background-position: center;
   background-size: cover;
+
   /* height: 100vh; */
+
   /* background-color: red; */
   background-image: url('../img/VESPA_YELLOW.jpg');
   color: white;
@@ -11,6 +13,7 @@
 .reserveDiv {
   /* background-color: #97BF11; */
   width: 100%;
+
   /* padding: 0 6rem 0 6rem;  */
   color: white;
   height: inherit;
@@ -34,7 +37,7 @@
   justify-content: center;
   background-color: white;
   padding: 0.5rem 0.8rem 0.5rem 0.8rem;
-  color: #97BF11;
+  color: #97bf11;
   border-radius: 16px;
 }
 
@@ -49,6 +52,7 @@
 
 .reseveBodyContainer {
   height: 100vh;
+
   /* background-color: red; */
   opacity: 0.9;
 }
@@ -57,6 +61,7 @@
   background-color: black;
   color: #fff;
   text-decoration: none;
+
   /* padding: 0.8rem; */
   padding-left: 1.5rem;
 }
@@ -113,7 +118,6 @@
 
 .checkContainer label {
   cursor: pointer;
-
 }
 
 #daysCheckbox {
@@ -150,11 +154,13 @@
 .reserveContainerContent {
   /* height: 100vh; */
   display: grid;
+
   /* display: flex; */
   opacity: 0.9;
   height: 100vh;
-  background-color: #97BF11;
+  background-color: #97bf11;
   height: inherit;
+
   /* padding-bottom: 0.1rem; */
 }
 
@@ -167,6 +173,7 @@
 .revervesTableContainer {
   /* background-color: rgb(160, 86, 86); */
   padding: 1rem;
+
   /* justify-items: center; */
 }
 
@@ -187,7 +194,7 @@
   display: grid;
   grid-template-columns: 30fr 40fr 30fr;
   padding: 1rem;
-  border: 1px dashed #97BF11;
+  border: 1px dashed #97bf11;
   margin-top: 0.5rem;
   border-radius: 8px;
   transition: all 2s ease-in-out;
@@ -205,7 +212,7 @@
   display: none;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .reserveFormHeader {
     display: flex;
     justify-content: space-between;
@@ -215,11 +222,12 @@
 
   .reseverNavbarContainer {
     width: 21%;
-    }
- 
+  }
+
   .hide {
     display: none;
   }
+
   .reserveContainerContent {
     grid-template-rows: 5fr 95fr;
   }
