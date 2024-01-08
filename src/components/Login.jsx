@@ -1,47 +1,31 @@
 import React, { useState } from 'react';
-import '../style/login.css';
-import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
 import { Navigate, useNavigate } from 'react-router-dom';
-import { loginPath } from '../urls';
-
-let res;
-let dataAxios;
+import { cleanMessage, loginUser } from '../redux/userSlice';
+import '../style/login.css';
 
 const Login = () => {
   const [credential, setCredential] = useState({ email: '', password: '' });
-  const [loged, setLoged] = useState(false);
   const navegate = useNavigate();
 
-  const formHandler = async (e) => {
-    e.preventDefault();
-    const user = { user: { email: credential.email, password: credential.password } };
-    try {
-      res = await axios.post(loginPath, user);
-      dataAxios = res.data;
-    } catch (error) {
-      if (error.code === 'ERR_NETWORK') {
-        setLoged(error.message);
-      }
-    }
+  const dispatch = useDispatch();
+  const {
+    currentUser,
+    information,
+  } = useSelector((state) => state.user);
 
-    if (dataAxios?.success) {
-      localStorage.setItem('session_token', JSON.stringify({ user: dataAxios.user, token: dataAxios.token }));
-    }
-
-    if (localStorage.getItem('session_token')) {
-      setLoged(dataAxios.message);
-    }
-
-    if (dataAxios?.error) {
-      setLoged(dataAxios.message);
-    }
-  };
-
-  if (JSON.parse(localStorage.getItem('session_token'))?.token) return (<Navigate to="/motorcycles" />);
+  if (currentUser) return (<Navigate to="/motorcycles" />);
   return (
     <section className="loginContainer flexV">
       <div className="loginDiv">
-        <form method="post" className="formContainer flexV">
+        <form
+          method="post"
+          className="formContainer flexV"
+          onSubmit={(el) => {
+            el.preventDefault();
+            dispatch(loginUser(credential));
+          }}
+        >
           <div className="flexV">
             <label htmlFor="email">
               Email
@@ -81,13 +65,21 @@ const Login = () => {
           </div>
 
           <div className="loginButtons flexH">
-            <button onClick={formHandler} type="submit" id="loginBtn">Login</button>
+            <button type="submit" id="loginBtn">Login</button>
             Or
-            <button onClick={() => { navegate('/signup'); }} type="button">Sign up</button>
+            <button
+              onClick={() => {
+                dispatch(cleanMessage());
+                navegate('/signup');
+              }}
+              type="button"
+            >
+              Sign up
+            </button>
           </div>
         </form>
       </div>
-      {loged && (<p className="infoParagraph">{loged}</p>)}
+      {information && (<p className="infoParagraph">{information}</p>)}
     </section>
   );
 };
