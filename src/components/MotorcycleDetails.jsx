@@ -1,18 +1,18 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import NavBar from './NavBar';
 import '../style/mainSection.css';
 
 const MotorcycleDetails = () => {
-  if (!JSON.parse(localStorage.getItem('session_token'))?.token) return (<Navigate to="/" />);
+  const currentUser = useSelector((state) => state.user.currentUser);
+  if (!currentUser) return (<Navigate to="/login" />);
   return (
     <>
-      {(JSON.parse(localStorage.getItem('session_token'))?.token) && (
-        <section className="mainUi">
-          <NavBar />
-          <h1>Motorcycle item</h1>
-        </section>
-      )}
+      <section className="mainUi">
+        <NavBar />
+        <h1>Motorcycle item</h1>
+      </section>
     </>
   );
 };

@@ -43,7 +43,6 @@ const MotorcycleForm = () => {
           }}
           className="motorcycleForm"
         >
-
           <div className="flexV">
             <input
               type="text"
@@ -181,24 +180,16 @@ const MotorcycleForm = () => {
           <div className="flexV">
             <textarea
               name="description"
-              id="description"
               onChange={(evt) => {
-                // const newText = evt.target.value;
-                // if (newText.length >= 50) {
-                  setNewMotorcycle({ ...newMotorcycle, description: evt.target.value });
-                // }
+                setNewMotorcycle({ ...newMotorcycle, description: evt.target.value });
               }}
               placeholder="Motorcycle Description"
-              required
             />
           </div>
 
           <div className="buttonContainer">
             <button
               type="submit"
-            // onClick={() => {
-            //   dispatch(postMotorcycles({ data: newMotorcycle, header: requestHeader }));
-            // }}
             >
               Save
             </button>

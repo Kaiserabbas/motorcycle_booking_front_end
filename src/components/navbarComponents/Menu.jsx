@@ -24,7 +24,7 @@ const Menu = () => {
       </li>
       <li>
         <NavLink
-          to="/reserve"
+          to="/reserve/new"
           onClick={() => {
             dispatch(setIconUser());
           }}
@@ -47,7 +47,7 @@ const Menu = () => {
         <>
           <li>
             <NavLink
-              to="/motorcycle"
+              to="/motorcycle/new"
               onClick={() => {
                 dispatch(setIconUser());
               }}
