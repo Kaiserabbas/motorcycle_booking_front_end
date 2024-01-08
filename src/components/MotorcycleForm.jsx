@@ -1,15 +1,9 @@
-import { Navigate } from 'react-router-dom';
-import { useState } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import NavBar from './NavBar';
-import { motorclesPath, requestHeader } from '../urls';
 import ItemPreview from './ItemPreview';
-
-const get = async (postData) => {
-  await axios.post(motorclesPath, postData, requestHeader)
-    .then((response) => console.log(response.data))
-    .catch((error) => console.error('Error:', error.response.statusText));
-};
+import { getMotorcycles, postMotorcycles, setFalsePostSuccess } from '../redux/motorcycleSlice';
+import Message from './Message';
 
 const MotorcycleForm = () => {
   const [newMotorcycle, setNewMotorcycle] = useState({
@@ -23,20 +17,28 @@ const MotorcycleForm = () => {
     imageLink: '',
   });
 
-  if (!JSON.parse(localStorage.getItem('session_token'))?.token) return (<Navigate to="/" />);
+  const requestHeader = useSelector((state) => state.user.requestHeader);
+  const { information, postSuccess } = useSelector((state) => state.motorcycle);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getMotorcycles(requestHeader));
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (postSuccess) {
+      document.querySelector('.motorcycleForm').reset();
+    }
+  }, [postSuccess]);
+
   return (
     <section className="mainUi">
       <NavBar />
       <div className="addMottorcycleContainer formContainer">
-        {/* <header className="mainBodyHeader flexV">
-        <h1>ADD NEW MOTORCYCLE</h1>
-        <hr className='bar' />
-            </header> */}
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            // console.log(newMotorcycle);
-            get(newMotorcycle);
+            dispatch(postMotorcycles({ data: newMotorcycle, header: requestHeader }));
+            dispatch(setFalsePostSuccess());
           }}
           className="motorcycleForm"
         >
@@ -54,6 +56,7 @@ const MotorcycleForm = () => {
                 });
               }}
               minLength={2}
+              required
             />
           </div>
 
@@ -69,6 +72,7 @@ const MotorcycleForm = () => {
                   model: e.target.value,
                 });
               }}
+              required
             />
           </div>
           <div className="flexV">
@@ -83,6 +87,7 @@ const MotorcycleForm = () => {
                   brand: e.target.value,
                 });
               }}
+              required
             />
 
           </div>
@@ -99,6 +104,7 @@ const MotorcycleForm = () => {
                   color: e.target.value,
                 });
               }}
+              required
             />
 
           </div>
@@ -115,6 +121,7 @@ const MotorcycleForm = () => {
                   chassisNumber: e.target.value,
                 });
               }}
+              required
             />
 
           </div>
@@ -133,6 +140,7 @@ const MotorcycleForm = () => {
               }}
               step={0.1}
               min={0}
+              required
             />
 
           </div>
@@ -151,6 +159,7 @@ const MotorcycleForm = () => {
               step={0.1}
               min={0}
               placeholder="Motorcycle's Sales Price $"
+              required
             />
 
           </div>
@@ -160,25 +169,27 @@ const MotorcycleForm = () => {
               type="url"
               name="imageLink"
               id="imageLink"
-              onBlur={(evt) => {
+              onChange={(evt) => {
                 setNewMotorcycle({ ...newMotorcycle, imageLink: evt.target.value });
               }}
               placeholder="Motorcycle Images 's Link"
+              required
             />
           </div>
 
           <div className="buttonContainer">
             <button
               type="submit"
-              onClick={() => {
-                console.log('Envuei');
-              }}
+              // onClick={() => {
+              //   dispatch(postMotorcycles({ data: newMotorcycle, header: requestHeader }));
+              // }}
             >
               Save
             </button>
           </div>
         </form>
         <ItemPreview url={newMotorcycle.imageLink} />
+        {information && information !== 'Loading...' && <Message message={information} />}
       </div>
     </section>
   );
