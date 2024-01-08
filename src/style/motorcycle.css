@@ -1,98 +1,106 @@
 .motorcycleItem {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
-    /* width: 80%; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0 5px 0 5px;
+  justify-content: center;
 }
 
 .motorcycleItemPicture {
-    width: 100%;
-    height: 100%;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* justify-self: center; */
-    cursor: pointer;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .motorcycleItemPicture img {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    transition: 1s 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  transition: 1s 0.5s ease-in-out;
 }
 
 .photoItem:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .motorcycleItemNameModel {
-    margin-top: 2rem;
-    justify-content: center;
-    padding-bottom: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  padding-bottom: 1rem;
 }
 
 .bar {
-    border: 1px dashed rgba(220, 200, 200, 0.72);
-    width: 60%;
-    align-self: center;
+  border: 1px dashed rgba(220, 200, 200, 0.72);
+  width: 60%;
+  align-self: center;
 }
 
 .motorcycleItemDescription,
 .motorcycleItemLinks {
-    margin-top: 1rem;
+  margin-top: 1rem;
+}
+
+.motorcycleItemLinks {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.motorcycleItemLinks p {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  color: rgba(163, 162, 162, 0.863);
 }
 
 .buttonContainer {
-    padding-top: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .buttonContainer button,
 .reservebuttonContainer button {
-    background-color: #97BF11;
-    color: white;
-    padding: 0.8rem 2rem 0.8rem 2rem;
-    border-radius: 20px;
+  background-color: #97BF11;
+  color: white;
+  padding: 0.8rem 2rem 0.8rem 2rem;
+  border-radius: 20px;
 }
 
 .reservebuttonContainer button {
-    background-color: white;
-    border-radius: 20px;
-    color: #97BF11;
+  background-color: white;
+  border-radius: 20px;
+  color: #97BF11;
 }
 
 .itemImagePreview {
-    align-items: flex-end;
-    gap: 2rem;
-    padding-right: 10rem;
-    margin-top: -2rem;
+  align-items: flex-end;
+  gap: 2rem;
+  padding-right: 10rem;
+  margin-top: -2rem;
 }
 
 .itemImagePreviewContainer {
-    display: flex;
-    justify-content: flex-end;
-    align-self: flex-end;
-    height: 10rem;
-    width: 14rem;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  height: 10rem;
+  width: 14rem;
 }
 
 .itemImagePreviewContainer img {
-    width: 100%;
-    height: 100%;
-    transition: all 1.5s 1.5s ease-in-out;
-    border-radius: 8px;
-    margin-top: 7px;
+  width: 100%;
+  height: 100%;
+  transition: all 1.5s 1.5s ease-in-out;
+  border-radius: 8px;
+  margin-top: 7px;
 }
 
 .previewImage:hover {
-    cursor: pointer;
-    transform: scale(1.5);
-    border-radius: 16px;
+  cursor: pointer;
+  transform: scale(1.5);
+  border-radius: 16px;
 }
 
 .addMottorcycleContainer {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 /* .hide {
@@ -100,34 +108,39 @@
 } */
 
 .motorcycleForm {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 1rem 1rem 1rem;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem 1rem 1rem;
+  gap: 1rem;
 }
 
 @media screen and (min-width:768px) {
-    .motorcycleForm {
-        display: grid;
-        grid-template-columns: 50fr 50fr;
-        grid-template-rows: 100fr;
-        margin: 2rem 1rem 1rem 1rem;
-        column-gap: 2rem;
-        row-gap: 2rem;
-    }
-    .motorcycleItem {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-    }
-    
-    .motorcycleItemPicture {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        justify-self: center;
-        cursor: pointer;
-    }
+  .motorcycleForm {
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    grid-template-rows: 100fr;
+    margin: 2rem 1rem 1rem 1rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+
+  .motorcycleItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .motorcycleItemPicture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    cursor: pointer;
+  }
+}
+
+#description {
+  text-align: center;
 }

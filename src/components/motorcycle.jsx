@@ -37,7 +37,7 @@ const Motorcycle = ({ motorcycle }) => {
         <p>{motorcycle?.model}</p>
       </div>
       <div className="motorcycleItemLinks flexH">
-        <p>Chegando</p>
+        <p id="description">{motorcycle?.description}</p>
       </div>
     </div>
   );

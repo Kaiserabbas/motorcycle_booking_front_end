@@ -15,6 +15,7 @@ const MotorcycleForm = () => {
     model: '',
     price: null,
     imageLink: '',
+    description: '',
   });
 
   const requestHeader = useSelector((state) => state.user.requestHeader);
@@ -177,12 +178,27 @@ const MotorcycleForm = () => {
             />
           </div>
 
+          <div className="flexV">
+            <textarea
+              name="description"
+              id="description"
+              onChange={(evt) => {
+                // const newText = evt.target.value;
+                // if (newText.length >= 50) {
+                  setNewMotorcycle({ ...newMotorcycle, description: evt.target.value });
+                // }
+              }}
+              placeholder="Motorcycle Description"
+              required
+            />
+          </div>
+
           <div className="buttonContainer">
             <button
               type="submit"
-              // onClick={() => {
-              //   dispatch(postMotorcycles({ data: newMotorcycle, header: requestHeader }));
-              // }}
+            // onClick={() => {
+            //   dispatch(postMotorcycles({ data: newMotorcycle, header: requestHeader }));
+            // }}
             >
               Save
             </button>

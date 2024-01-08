@@ -44,13 +44,27 @@
   transition: all 1s ease-in-out;
 }
 
+.formContainer div textarea {
+  padding: 0.7rem;
+  opacity: 0.8;
+  border-radius: 5px;
+  transition: all 1s ease-in-out;
+  border: 2px solid black;
+  resize: vertical;
+}
+
+.formContainer div textarea:focus,
+select:focus {
+  border-color: #97BF11;
+  outline-style: dotted;
+  box-shadow: 2px 2px 5px 0 #748d0f88;
+}
 .formContainer div input:focus,
 select:focus {
   border-color: #97BF11;
   outline-style: dotted;
   box-shadow: 2px 2px 5px 0 #748d0f88;
 }
-
 
 select {
   padding: 0.7rem;

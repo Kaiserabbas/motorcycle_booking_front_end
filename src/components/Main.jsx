@@ -62,7 +62,7 @@ const Main = () => {
       <div className="mainBody flexV">
         <header className="mainBodyHeader flexV">
           <h1>LATEST MODELS</h1>
-          <p>Please select a Vespa Model</p>
+          <h5>Please select a Vespa Model</h5>
           <hr className="bar" />
         </header>
         <section className="motorcyclesContainer">
