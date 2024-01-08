@@ -3,14 +3,16 @@
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
+    justify-content: center;
+    /* width: 80%; */
 }
 
-.motorcycleItemPicture{
+.motorcycleItemPicture {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    justify-self: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* justify-self: center; */
     cursor: pointer;
 }
 
@@ -21,7 +23,7 @@
     transition: 1s 0.5s ease-in-out;
 }
 
-.motorcycleItemPicture img:hover {
+.photoItem:hover {
     transform: scale(1.1);
 }
 
@@ -42,24 +44,15 @@
     margin-top: 1rem;
 }
 
-.motorcycleForm {
-    display: grid;
-    grid-template-columns: 50fr 50fr;
-    grid-template-rows: 100fr;
-    margin: 2rem 1rem 1rem 1rem;
-    column-gap: 2rem;
-    row-gap: 2rem;
-}
-
-.buttonContainer{
+.buttonContainer {
     padding-top: 1.5rem;
 }
 
 .buttonContainer button,
 .reservebuttonContainer button {
-    background-color:#97BF11;
+    background-color: #97BF11;
     color: white;
-    padding: 0.8rem 2rem  0.8rem 2rem;
+    padding: 0.8rem 2rem 0.8rem 2rem;
     border-radius: 20px;
 }
 
@@ -75,6 +68,7 @@
     padding-right: 10rem;
     margin-top: -2rem;
 }
+
 .itemImagePreviewContainer {
     display: flex;
     justify-content: flex-end;
@@ -88,9 +82,10 @@
     height: 100%;
     transition: all 1.5s 1.5s ease-in-out;
     border-radius: 8px;
+    margin-top: 7px;
 }
 
-.itemImagePreviewContainer img:hover{
+.previewImage:hover {
     cursor: pointer;
     transform: scale(1.5);
     border-radius: 16px;
@@ -100,3 +95,39 @@
     margin-top: 1rem;
 }
 
+/* .hide {
+    display: none;
+} */
+
+.motorcycleForm {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1rem 1rem 1rem;
+    gap: 1rem;
+}
+
+@media screen and (min-width:768px) {
+    .motorcycleForm {
+        display: grid;
+        grid-template-columns: 50fr 50fr;
+        grid-template-rows: 100fr;
+        margin: 2rem 1rem 1rem 1rem;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+    .motorcycleItem {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
+    .motorcycleItemPicture {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        cursor: pointer;
+    }
+}

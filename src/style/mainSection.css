@@ -1,7 +1,65 @@
 .mainUi {
-    display: grid;
-    grid-template-columns: 15fr 85fr;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.motorcyclesContainerMobile {
+    width: 92%;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonContainerRightMobile {
+    display: block;
+}
+.motorcyclesContainer,
+.buttonContainerRightDesktop {
+    display: none;
+}
+
+.mainBodyHeader h1 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.mainBodyHeader {
+    margin-top: -3%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+@media screen and (min-width:768px) {
+    .buttonContainerRightDesktop {
+        display: block;
+    }
+
+    .mainUi {
+        display: grid;
+        grid-template-columns: 15fr 85fr;
+        height: 100vh;
+    }
+
+    .motorcyclesContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        height: 250px;
+    }
+
+    .motorcyclesContainerMobile,
+    .buttonContainerRightMobile {
+        display: none;
+    }
+    .mainBodyHeader {
+        margin-top: -8%;
+        padding-bottom: 10rem;
+    }
+    .mainBodyHeader h1 {
+        font-size: 30px;
+    }
 }
 
 .mainContainer {
@@ -22,23 +80,23 @@
 .buttonContainerRight,
 .noneItemLeft,
 .noneItemRight {
-background-color: #97BF11;
-padding: 1rem 0.4rem 1rem 0.4rem;
+    background-color: #97BF11;
+    padding: 1rem 0.4rem 1rem 0.4rem;
 }
 
 .buttonContainerLeft,
-.noneItemLeft{
+.noneItemLeft {
     justify-content: flex-end;
 }
 
 .buttonContainerRight,
-.noneItemRight{
+.noneItemRight {
     justify-content: flex-start;
 }
 
 
 .noneItemLeft,
-.noneItemRight{
+.noneItemRight {
     background-color: whitesmoke;
 }
 
@@ -48,7 +106,7 @@ padding: 1rem 0.4rem 1rem 0.4rem;
 }
 
 .buttonContainerLeft button,
-.buttonContainerRight button{
+.buttonContainerRight button {
     border: transparent;
     cursor: pointer;
     background: transparent;
@@ -68,38 +126,26 @@ padding: 1rem 0.4rem 1rem 0.4rem;
     border-bottom-left-radius: 40px;
 }
 
-.mainBodyHeader {
-    margin-top: -10rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding-bottom: 2rem;
+.mainBodyHeader p {
+font-family: 'Noto Sans KR', sans-serif;
+font-size: 13px;
+color: rgba(163, 162, 162, 0.685);
 }
 
-.mainBodyHeader h1 {
-    font-size: 30pt;
-}
 
 .mainBodyHeader hr {
     margin-top: 0.5rem;
 }
 
-.motorcyclesContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    height: 250px;
-}
-
 #leftIcon,
-#rightIcon{
-transform: scale(2.2);
+#rightIcon {
+    transform: scale(2.2);
 }
 
-#leftIcon{
+#leftIcon {
     margin-left: 1rem;
 }
 
-#rightIcon{
+#rightIcon {
     margin-right: 1rem;
 }
