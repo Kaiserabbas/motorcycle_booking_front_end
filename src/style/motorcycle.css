@@ -147,7 +147,7 @@
 
 .buttonContainer button,
 .reservebuttonContainer button {
-  background-color: #97BF11;
+  background-color: #97bf11;
   color: white;
   padding: 0.8rem 2rem 0.8rem 2rem;
   border-radius: 20px;
@@ -156,7 +156,7 @@
 .reservebuttonContainer button {
   background-color: white;
   border-radius: 20px;
-  color: #97BF11;
+  color: #97bf11;
 }
 
 .itemImagePreview {
@@ -203,7 +203,7 @@
   gap: 1rem;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .motorcycleForm {
     display: grid;
     grid-template-columns: 50fr 50fr;

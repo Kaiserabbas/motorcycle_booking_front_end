@@ -15,7 +15,7 @@
 .motorcycleToDelete {
   padding: 0.5rem 1rem 0.5rem 1rem;
   justify-content: space-between;
-  border: 1px dashed #97BF11;
+  border: 1px dashed #97bf11;
   align-items: center;
   margin: 0 1rem 0 1rem;
   transition: all 1s 1s ease-in-out;
@@ -45,7 +45,7 @@
   justify-content: center;
   align-items: center;
   z-index: 7000;
-  border: 1px solid #97BF11;
+  border: 1px solid #97bf11;
   border-radius: 16px;
 }
 
@@ -70,7 +70,7 @@
 }
 
 #btnYes {
-  background-color: #97BF11;
+  background-color: #97bf11;
 }
 
 #btnNo {
@@ -96,7 +96,7 @@
   opacity: 1;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .motorcycleItemListContainer {
     height: inherit;
     overflow-y: scroll;

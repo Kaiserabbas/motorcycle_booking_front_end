@@ -1,6 +1,7 @@
 .controlVisibility {
   display: flex;
-}  
+}
+
 .navContainer {
   display: grid;
   grid-template-columns: auto;
@@ -12,7 +13,7 @@
 }
 
 .navContainer .navList .active {
-  background-color: #97BF11;
+  background-color: #97bf11;
   color: white;
   text-decoration: none;
   padding: 0.8rem;
@@ -30,7 +31,7 @@
   gap: 2rem;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .navContainer {
     background-color: white;
     background-image: url("../img/whiteVespa.webp");
@@ -52,9 +53,12 @@
   .navContainer .navList .active {
     opacity: 0.8;
   }
+
   .navContainer footer {
-  justify-content: center;
+    justify-content: center;
+
     /* margin-top: 4rem; */
+
     /* margin: 4rem 4% 0 4%; */
     padding: 0.3rem;
     background-color: #2e3a05;
@@ -62,26 +66,35 @@
     position: fixed;
     width: 100%;
     bottom: 0;
+
     /* border-radius: 16px; */
     color: white;
   }
+
   .controlVisibility {
     display: none;
-  }  
+  }
+
   .logoutingContainer {
     /* height: 20%; */
+
     /* background-color: white;
     border: 1px solid #96bf119a; */
+
     /* padding-left: 1rem; */
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+
     /* align-items: center; */
+
     /* justify-content: center; */
+
     /* margin: -5rem 0.2rem 0.2rem 0.2rem; */
     gap: 1rem;
     border-radius: 16px;
   }
 }
+
 .titleContainer {
   justify-content: center;
   align-items: center;
@@ -147,6 +160,7 @@ li {
   margin-top: 2rem;
   justify-content: center;
   padding: 0.5rem;
+
   /* background-color: red; */
 }
 
@@ -170,7 +184,7 @@ footer ul li {
   text-transform: uppercase;
 }
 
-.logoutingContainer p{
+.logoutingContainer p {
   color: black;
 }
 
