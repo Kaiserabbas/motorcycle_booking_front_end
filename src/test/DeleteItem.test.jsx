@@ -23,11 +23,10 @@ describe('DeleteItem component', () => {
     const { getByText } = render(
       <Provider store={store}>
         <DeleteItem motorcycle={motorcycle} />
-      </Provider>
+      </Provider>,
     );
 
     // Check if the component renders successfully
     expect(getByText('Test Motorcycle')).toBeInTheDocument();
   });
-
 });

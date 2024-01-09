@@ -32,8 +32,10 @@
     ],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
+    "react/prop-types": "off",
     "no-shadow": "off",
-    "prop-types": "off"
+    "no-unused-vars": "off",
+    "react/jsx-first-prop-new-line": "off"
   },
   "overrides": [
     {

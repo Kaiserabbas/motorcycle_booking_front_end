@@ -76,9 +76,13 @@ const MotorcycleDetails = () => {
               </div>
             </div>
             <div className="detailsItemBody">
-              <button type="button" onClick={() => {
-                navigate("/reserve/new");
-              }}>Book now</button>
+              <button type="button"
+                onClick={() => {
+                  navigate('/reserve/new');
+                }}
+              >
+                Book now
+              </button>
             </div>
           </div>
         </div>

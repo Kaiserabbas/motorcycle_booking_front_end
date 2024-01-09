@@ -26,7 +26,9 @@ const FormReserve = () => {
 
   const [toPay, setToPay] = useState(0);
   const [timeCheck, setTimeCheck] = useState(false);
-  const [selected, setSelected] = useState(selectedMotorcycle?.id ? selectedMotorcycle : motorcycles[0]);
+  const [selected, setSelected] = useState(
+    selectedMotorcycle?.id ? selectedMotorcycle : motorcycles[0],
+  );
   const [valid, setValid] = useState(false);
   const [fulldate, setFullDate] = useState({
     fromDate: null,
@@ -437,8 +439,7 @@ const FormReserve = () => {
                 setToPay(0);
                 document.querySelector('.formReserve').reset();
                 setTimeCheck(false);
-              }
-              }
+              }}
             >
               Book Now
             </button>
