@@ -7,6 +7,95 @@
   justify-content: center;
 }
 
+/* .motorcycleDetailsContainer {
+  display: grid;
+  grid-template-columns: 5fr 70fr 25fr;
+  height: 100vh;
+} */
+.motorcycleDetailsContainer {
+  display: grid;
+  grid-template-columns: 5% 80% 15%;
+  height: 100vh;
+}
+
+#notfoundImg {
+  margin-top: 5rem;
+  height: 50%;
+  width: 50%;
+}
+
+/* .motorcycleDetailsContainerMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.motorcycleDetailsContainerMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.motorcycleDetailsContainerAbout {
+  padding: 1rem;
+}
+
+.motorcycleDetailsContainerMain img {
+  width: 100%;
+  height: 75%;
+  transition: all 1s ease-in-out;
+}
+.selectedItemPriceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem 5rem 0.5rem 0;
+  background-color: rgba(167, 165, 165, 0.425);
+  gap: 0.5rem;
+}
+
+.selectedItemPriceContainer p{
+  font-size: 10px;
+  font-weight: 700;
+  margin-right: 5rem;
+  width: 100%;
+}
+
+.detailsItemHeader {
+  margin-top: 20%;
+  text-align: end;
+}
+.detailsItemHeader h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.detailsItemBody {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: flex-end;  
+}
+
+.detailsItemBody button {
+  background-color: #97BF11;
+  color: white;
+  padding: 1rem 1.5rem 1rem 1.5rem ;
+  border-radius: 30px;
+}
+
+.btnContainer {
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+}
+
 .motorcycleItemPicture {
   width: 100%;
   height: 100%;
@@ -138,6 +227,29 @@
     justify-content: center;
     justify-self: center;
     cursor: pointer;
+  }
+
+  .detailsItemBody {
+    margin-top: 20rem;
+  
+  }
+
+  .motorcycleDetailsContainerMain img {
+    width: 100%;
+    height: 100%;
+  }
+  .selectedItemPriceContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 0.4rem 0.5rem 0.4rem;
+    margin: 2rem 0 0.5rem 0;
+    background-color: rgba(167, 165, 165, 0.425);
+  }
+  .selectedItemPriceContainer p{
+    font-size: 14px;
+    font-weight:400;
+    margin-right: 0;
+    width: 100%;
   }
 }
 

@@ -9,6 +9,7 @@ import {
 const FormReserve = () => {
   const currentUser = useSelector((state) => state.user.currentUser);
   const headerRequest = useSelector((state) => state.user.requestHeader);
+  const { selectedMotorcycle } = useSelector((state) => state.motorcycle);
   const dispatch = useDispatch();
   const { motorcycles } = useSelector((state) => state.motorcycle);
   const { postSuccess } = useSelector((state) => state.reserve);
@@ -25,7 +26,7 @@ const FormReserve = () => {
 
   const [toPay, setToPay] = useState(0);
   const [timeCheck, setTimeCheck] = useState(false);
-  const [selected, setSelected] = useState(motorcycles[0]);
+  const [selected, setSelected] = useState(selectedMotorcycle?.id ? selectedMotorcycle : motorcycles[0]);
   const [valid, setValid] = useState(false);
   const [fulldate, setFullDate] = useState({
     fromDate: null,
@@ -42,7 +43,6 @@ const FormReserve = () => {
     city: null,
   });
 
-  console.log(selected);
   return (
     <form
       onSubmit={(element) => {
@@ -83,6 +83,7 @@ const FormReserve = () => {
       <div className="flexV">
         Please Select a Motorcycle
         <select
+          disabled={selectedMotorcycle ? true : ''}
           name="motorcycle"
           id="motorcycle"
           required
@@ -121,11 +122,11 @@ const FormReserve = () => {
           {motorcycles.map((motorcycle, index) => (
             index === 0 ? (
               <option
-                key={motorcycle.id}
-                value={JSON.stringify(motorcycle)}
+                key={selectedMotorcycle ? selectedMotorcycle.id : motorcycle.id}
+                value={JSON.stringify(selected)}
                 selected
               >
-                {motorcycle.name}
+                {selectedMotorcycle ? selectedMotorcycle.name : motorcycle.name}
               </option>
             )
               : (
@@ -435,7 +436,9 @@ const FormReserve = () => {
                 });
                 setToPay(0);
                 document.querySelector('.formReserve').reset();
-              }}
+                setTimeCheck(false);
+              }
+              }
             >
               Book Now
             </button>

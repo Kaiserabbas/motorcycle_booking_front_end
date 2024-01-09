@@ -38,6 +38,11 @@
   border-radius: 16px;
 }
 
+#notfoundImg {
+  height: 50%;
+  width: 50%;
+}
+
 #glass,
 #hamburrguerIcon {
   cursor: pointer;

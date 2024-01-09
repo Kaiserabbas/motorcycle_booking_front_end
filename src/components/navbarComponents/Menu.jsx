@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { logout, setIconUser } from '../../redux/userSlice';
+import { clearSelectedMotorcycle } from '../../redux/motorcycleSlice';
 
 const Menu = () => {
   const [logouting, setLogouting] = useState(false);
@@ -27,6 +28,7 @@ const Menu = () => {
           to="/reserve/new"
           onClick={() => {
             dispatch(setIconUser());
+            dispatch(clearSelectedMotorcycle());
           }}
         >
           Reserve Form
