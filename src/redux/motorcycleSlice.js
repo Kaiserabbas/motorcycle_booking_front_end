@@ -54,11 +54,11 @@ const motorcycleSlice = createSlice({
     },
     setSelectedMotorcycle: (state, action) => {
       state.selectedMotorcycle = action.payload;
-      //console.log(state.selectedMotorcycle);
+      // console.log(state.selectedMotorcycle);
     },
     clearSelectedMotorcycle: (state) => {
       state.selectedMotorcycle = false;
-      //console.log(state.selectedMotorcycle);
+      // console.log(state.selectedMotorcycle);
     },
   },
   extraReducers: (builder) => {

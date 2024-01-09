@@ -42,7 +42,7 @@ const MotorcycleDetails = () => {
           <div className="motorcycleDetailsContainerMain">
             {imageError && (
               <img
-              id="notfoundImg"
+                id="notfoundImg"
                 src={notImageIcon}
                 alt="Notfound item"
               />

@@ -14,10 +14,10 @@ const ItemPreview = ({ url }) => {
 
           <div className="itemImagePreviewContainer">
             {imageError && (
-            <img
-              src={notImageIcon}
-              alt="Notfound item"
-            />
+              <img
+                src={notImageIcon}
+                alt="Notfound item"
+              />
             )}
             <img
               src={url}
