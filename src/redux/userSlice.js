@@ -80,7 +80,7 @@ const userSlice = createSlice({
         state.isLoading = false;
         if (action.payload?.error) {
           state.error = true;
-          state.information = 'action.payload.message';
+          state.information = action.payload.message;
         } else {
           state.success = true;
           state.currentUser = action.payload.user;

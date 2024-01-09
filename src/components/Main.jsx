@@ -12,7 +12,7 @@ const Main = () => {
   const { motorcycles, isLoading, error } = useSelector((state) => state.motorcycle);
   useEffect(() => {
     dispatch(getMotorcycles(requestHeader));
-  }, [dispatch]);
+  }, [requestHeader, dispatch]);
 
   if (isLoading) {
     return (
