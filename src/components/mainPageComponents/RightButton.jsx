@@ -4,7 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const RightButton = () => (
   <div className="mainButton flexV">
     <div className="buttonContainerRight flexH">
-      <button><FontAwesomeIcon icon={faCaretRight} id="rightIcon" /></button>
+      <button type="button">
+        <FontAwesomeIcon icon={faCaretRight} id="rightIcon" />
+        {' '}
+      </button>
     </div>
   </div>
 );

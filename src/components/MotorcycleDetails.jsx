@@ -29,9 +29,6 @@ const MotorcycleDetails = () => {
                     <FontAwesomeIcon
                       icon={faCaretLeft}
                       id="leftIcon"
-                      onClick={() => {
-                        console.log('clicado!');
-                      }}
                     />
                     {' '}
                   </button>
@@ -42,13 +39,15 @@ const MotorcycleDetails = () => {
           <div className="motorcycleDetailsContainerMain">
             {imageError && (
               <img
-              id="notfoundImg"
+                id="notfoundImg"
                 src={notImageIcon}
                 alt="Notfound item"
               />
             )}
 
-            <img src={selectedMotorcycle?.imageLink}
+            {imageLoaded && (
+            <img
+              src={selectedMotorcycle?.imageLink}
               alt={selectedMotorcycle.name}
               srcSet="Vespa Mota"
               className={imageError ? 'hide' : 'photoItem'}
@@ -61,6 +60,7 @@ const MotorcycleDetails = () => {
                 setImageError(false);
               }}
             />
+            )}
           </div>
           <div className="motorcycleDetailsContainerAbout flexV">
             <div className="detailsItemHeader">
@@ -76,9 +76,14 @@ const MotorcycleDetails = () => {
               </div>
             </div>
             <div className="detailsItemBody">
-              <button type="button" onClick={() => {
-                navigate("/reserve/new");
-              }}>Book now</button>
+              <button
+                type="button"
+                onClick={() => {
+                  navigate('/reserve/new');
+                }}
+              >
+                Book now
+              </button>
             </div>
           </div>
         </div>

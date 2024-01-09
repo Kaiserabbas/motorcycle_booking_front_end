@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
-import Motorcycle from './motorcycle';
 import { getMotorcycles } from '../redux/motorcycleSlice';
+import Motorcycle from './Motorcycle';
 
 const Main = () => {
   const [currentToDisplay, setCurrentToDisplay] = useState(0);

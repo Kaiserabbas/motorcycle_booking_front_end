@@ -54,12 +54,10 @@ const motorcycleSlice = createSlice({
     },
     setSelectedMotorcycle: (state, action) => {
       state.selectedMotorcycle = action.payload;
-      console.log(state.selectedMotorcycle);
     },
     clearSelectedMotorcycle: (state) => {
       state.selectedMotorcycle = false;
-      console.log(state.selectedMotorcycle);
-    }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -138,8 +136,10 @@ const motorcycleSlice = createSlice({
 });
 
 export default motorcycleSlice.reducer;
-export const { setToDelete,
+export const {
+  setToDelete,
   setFalsePostSuccess, clearInformation,
   setSelectedMotorcycle,
-  clearSelectedMotorcycle } = motorcycleSlice.actions;
+  clearSelectedMotorcycle,
+} = motorcycleSlice.actions;
 export { getMotorcycles, postMotorcycles, deleteMotorcycles };

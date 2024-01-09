@@ -55,7 +55,7 @@ const userSlice = createSlice({
     builder
       .addCase(signupUser.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.information = action.payload.message;
+        state.information = 'Created Your Account';
         if (action.payload?.error) {
           state.error = true;
           state.success = false;
@@ -80,7 +80,7 @@ const userSlice = createSlice({
         state.isLoading = false;
         if (action.payload?.error) {
           state.error = true;
-          state.information = action.payload.message;
+          state.information = 'action.payload.message';
         } else {
           state.success = true;
           state.currentUser = action.payload.user;

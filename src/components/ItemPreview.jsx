@@ -34,7 +34,6 @@ const ItemPreview = ({ url }) => {
             />
           </div>
         </>
-
       )}
     </div>
   );

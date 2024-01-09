@@ -437,8 +437,7 @@ const FormReserve = () => {
                 setToPay(0);
                 document.querySelector('.formReserve').reset();
                 setTimeCheck(false);
-              }
-              }
+              }}
             >
               Book Now
             </button>
