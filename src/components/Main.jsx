@@ -13,7 +13,7 @@ const Main = () => {
   const motorcycles = useSelector((state) => state.motorcycle.motorcycles) || [];
   useEffect(() => {
     dispatch(getMotorcycles(requestHeader));
-  }, [requestHeader, dispatch]);
+  }, [requestHeader]);
 
   if (isLoading) {
     return (

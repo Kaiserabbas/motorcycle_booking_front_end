@@ -1,4 +1,5 @@
-const base = 'https://motorcyclebooking.onrender.com';
+const base = 'http://localhost:3000';
+// const base = 'https://motorcyclebooking.onrender.com';
 const motorclesPath = `${base}/api/v1/motorcycles`;
 const loginPath = `${base}/api/v1/login`;
 const usersPath = `${base}/api/v1/users/`;

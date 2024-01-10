@@ -77,7 +77,6 @@ const userSlice = createSlice({
         state.success = false;
       })
       .addCase(loginUser.fulfilled, (state, action) => {
-        console.log('cheguei');
         state.information = action.payload.message;
         state.isLoading = false;
         if (action.payload?.error) {
