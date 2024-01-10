@@ -31,6 +31,7 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
+    "import/extensions": "off",
     "import/no-unresolved": "off",
     "react/prop-types": "off",
     "no-shadow": "off",
