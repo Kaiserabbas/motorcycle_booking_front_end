@@ -4,6 +4,6 @@
     ],
     "plugins": [
         "@babel/plugin-syntax-jsx",
-        "macros"
+        "babel-plugin-macros"
     ]
 }

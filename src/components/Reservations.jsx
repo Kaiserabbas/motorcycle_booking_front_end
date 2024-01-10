@@ -59,10 +59,10 @@ const Reservations = () => {
               ))
               : (
                 !error && (
-                <div className="infoContainer flexV">
-                  <p>Upss! There is no Reserves😁</p>
-                  <p>But you can Add it😍 or Contact the App Adm.</p>
-                </div>
+                  <div className="infoContainer flexV">
+                    <p>Upss! There is no Reserves😁</p>
+                    <p>But you can Add it😍 or Contact the App Adm.</p>
+                  </div>
                 )
               )}
           </div>
