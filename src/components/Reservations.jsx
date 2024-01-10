@@ -12,7 +12,7 @@ const Reservations = () => {
   useEffect(() => {
     dispatch(getReserves(requestHeader));
     dispatch(getMotorcycles(requestHeader));
-  }, [dispatch]);
+  }, [dispatch, requestHeader]);
   const {
     reserves, isLoading, error,
   } = useSelector((state) => state.reserve);

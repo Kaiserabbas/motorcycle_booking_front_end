@@ -17,7 +17,7 @@ const DeleteMotorcycles = () => {
 
   useEffect(() => {
     dispatch(getMotorcycles(requestHeader));
-  }, [requestHeader]);
+  }, [requestHeader, dispatch]);
 
   const currentUser = useSelector((state) => state.user.currentUser);
   if (!currentUser) return (<Navigate to="/login" />);
