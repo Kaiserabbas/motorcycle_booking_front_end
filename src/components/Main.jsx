@@ -9,7 +9,8 @@ const Main = () => {
   const [currentToDisplay, setCurrentToDisplay] = useState(0);
   const { requestHeader } = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  const { motorcycles, isLoading, error } = useSelector((state) => state.motorcycle);
+  const { isLoading, error } = useSelector((state) => state.motorcycle);
+  const motorcycles = useSelector((state) => state.motorcycle.motorcycles) || [];
   useEffect(() => {
     dispatch(getMotorcycles(requestHeader));
   }, [requestHeader, dispatch]);

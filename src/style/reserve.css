@@ -3,6 +3,7 @@
   background-position: center;
   background-image: url('../img/VESPA_YELLOW.jpg');
   color: white;
+  background-repeat: no-repeat;
 }
 
 .reserveDiv {

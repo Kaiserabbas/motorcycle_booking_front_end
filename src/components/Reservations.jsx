@@ -37,7 +37,7 @@ const Reservations = () => {
                 </div>
               )}
 
-            {error && (
+            {error && !isLoading && (
               <div className="infoContainer flexV">
                 <p>Upss! There is an Error😁</p>
                 <p>Please Check your Connection and try Again!</p>

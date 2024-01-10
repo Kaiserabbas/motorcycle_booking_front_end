@@ -37,7 +37,7 @@ const MotorcycleDetails = () => {
             </div>
           </div>
           <div className="motorcycleDetailsContainerMain">
-            {imageError && (
+            {imageError && !imageLoaded && (
               <img
                 id="notfoundImg"
                 src={notImageIcon}
@@ -45,7 +45,6 @@ const MotorcycleDetails = () => {
               />
             )}
 
-            {imageLoaded && (
             <img
               src={selectedMotorcycle?.imageLink}
               alt={selectedMotorcycle.name}
@@ -60,7 +59,7 @@ const MotorcycleDetails = () => {
                 setImageError(false);
               }}
             />
-            )}
+
           </div>
           <div className="motorcycleDetailsContainerAbout flexV">
             <div className="detailsItemHeader">
