@@ -47,8 +47,6 @@ const Reserve = () => {
           </div>
         </div>
       </div>
-      {/* <div className="reserveContainerContent"> */}
-      {/* </div> */}
     </section>
   );
 };

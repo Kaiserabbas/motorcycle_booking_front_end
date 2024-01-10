@@ -81,11 +81,12 @@ select {
 
 .infoParagraph {
   background-color: rgb(207, 207, 112);
-  padding: 1rem;
+  padding: 0.5rem;
   margin-top: 1rem;
   text-align: center;
   align-self: center;
   border-radius: 16px;
+  font-size: 18px;
 }
 
 #loginBtn {

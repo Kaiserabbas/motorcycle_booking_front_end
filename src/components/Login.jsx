@@ -23,7 +23,9 @@ const Login = () => {
           className="formContainer flexV"
           onSubmit={(el) => {
             el.preventDefault();
-            dispatch(loginUser(credential));
+            if (currentUser) {
+              navegate('/motorcycles');
+            }
           }}
         >
           <div className="flexV">
@@ -65,7 +67,15 @@ const Login = () => {
           </div>
 
           <div className="loginButtons flexH">
-            <button type="submit" id="loginBtn">Login</button>
+            <button
+              type="submit"
+              onClick={() => {
+                dispatch(loginUser(credential));
+              }}
+              id="loginBtn"
+            >
+              Login
+            </button>
             Or
             <button
               onClick={() => {

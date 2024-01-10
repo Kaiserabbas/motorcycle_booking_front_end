@@ -11,7 +11,7 @@ const FormReserve = () => {
   const headerRequest = useSelector((state) => state.user.requestHeader);
   const { selectedMotorcycle } = useSelector((state) => state.motorcycle);
   const dispatch = useDispatch();
-  const { motorcycles } = useSelector((state) => state.motorcycle);
+  const motorcycles = useSelector((state) => state.motorcycle.motorcycles) || [];
   const { postSuccess } = useSelector((state) => state.reserve);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const FormReserve = () => {
   const [reservation, setReservation] = useState({
     duration: 0,
     total: 0,
-    motorcycle_id: selected.id,
+    motorcycle_id: selected?.id || null,
     date: null,
     city: null,
   });
@@ -121,7 +121,7 @@ const FormReserve = () => {
             }
           }}
         >
-          {motorcycles.map((motorcycle, index) => (
+          {motorcycles.length > 0 ? motorcycles.map((motorcycle, index) => (
             index === 0 ? (
               <option
                 key={selectedMotorcycle ? selectedMotorcycle.id : motorcycle.id}
@@ -140,7 +140,7 @@ const FormReserve = () => {
                 </option>
               )
 
-          ))}
+          )) : (<option>Empty</option>)}
         </select>
       </div>
 
@@ -390,35 +390,12 @@ const FormReserve = () => {
         )
       }
 
-      {/* <div className="flexV">
-        {!valid && (
-          <>
-            <br />
-            <p id="invalid">
-              Ensure to Pick a valid Date
-            </p>
-          </>
-        )}
-        {!validateTime1(fulldate.singleDate) && (
-          <>
-            <br />
-            <p id="invalid">
-              Ensure to Pick a valid Date
-            </p>
-          </>
-        )}
-
-      </div> */}
-
       <div className="reservebuttonContainer">
         {
           toPay > 0 && (
             <button
               type="submit"
               onClick={() => {
-                console.log(fulldate);
-                console.log(toPay);
-                console.log(reservation);
                 dispatch(postReserves({ header: headerRequest, data: reservation }));
                 setFullDate(
                   {

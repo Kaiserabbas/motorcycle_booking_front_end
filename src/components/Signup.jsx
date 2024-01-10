@@ -6,10 +6,12 @@ import { cleanMessage, signupUser } from '../redux/userSlice';
 const Signup = () => {
   const dispatch = useDispatch();
   const navegate = useNavigate();
+  const [administrator, setAdministrator] = useState(false);
   const [newUser, setNewUser] = useState({
     name: '',
     email: '',
     password: '',
+    admin: false,
   });
 
   const {
@@ -79,6 +81,21 @@ const Signup = () => {
                 required
                 onChange={(e) => {
                   setNewUser({ ...newUser, password: e.target.value });
+                }}
+              />
+            </label>
+          </div>
+
+          <div className="flexV">
+            <label htmlFor="admin">
+              <h4>Administrator ?</h4>
+              <input
+                type="checkbox"
+                name="admin"
+                id="admin"
+                onChange={() => {
+                  setNewUser({ ...newUser, admin: !administrator });
+                  setAdministrator(!administrator);
                 }}
               />
             </label>

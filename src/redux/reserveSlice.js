@@ -41,7 +41,6 @@ const reserveSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getReserves.fulfilled, (state, action) => {
-        // console.log(action.payload);
         if (action.payload?.success) {
           state.success = true;
           state.error = false;

@@ -45,14 +45,9 @@
         "src/**/*Slice.js"
       ],
       // avoid state param assignment
-      "rules": {
-        "no-param-reassign": [
-          "error",
-          {
-            "props": false
-          }
-        ]
-      }
+      "rules": { "no-param-reassign": ["error", { "props": false }],
+      "max-len": ["error", { "code": 170 }]
+     }
     }
   ],
   "ignorePatterns": [

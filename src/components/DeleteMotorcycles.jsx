@@ -17,7 +17,7 @@ const DeleteMotorcycles = () => {
 
   useEffect(() => {
     dispatch(getMotorcycles(requestHeader));
-  }, []);
+  }, [requestHeader]);
 
   const currentUser = useSelector((state) => state.user.currentUser);
   if (!currentUser) return (<Navigate to="/login" />);
@@ -42,7 +42,6 @@ const DeleteMotorcycles = () => {
           {information && information !== 'Loading...' && <Message message={information} />}
         </div>
       </section>
-
     </>
   );
 };

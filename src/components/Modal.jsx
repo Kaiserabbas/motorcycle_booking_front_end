@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import axios from 'axios';
-// import { motorclesPath, requestHeader } from '../urls';
 import { deleteMotorcycles, getMotorcycles } from '../redux/motorcycleSlice';
 
 const hideModal = () => {
@@ -34,7 +32,6 @@ const DeleteModal = () => {
             onClick={() => {
               dispatch(deleteMotorcycles({ header: requestHeader, data: itemToDeleteId }));
               setForceUpdate(true);
-              // dispatch(deleteMotorcycles(itemToDeleteId));
               hideModal();
             }}
           >

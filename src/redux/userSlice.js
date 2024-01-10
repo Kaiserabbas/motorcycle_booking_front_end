@@ -55,7 +55,7 @@ const userSlice = createSlice({
     builder
       .addCase(signupUser.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.information = action.payload.message;
+        state.information = 'Created Your Account';
         if (action.payload?.error) {
           state.error = true;
           state.success = false;
@@ -77,15 +77,19 @@ const userSlice = createSlice({
         state.success = false;
       })
       .addCase(loginUser.fulfilled, (state, action) => {
+        console.log('cheguei');
+        state.information = action.payload.message;
         state.isLoading = false;
         if (action.payload?.error) {
           state.error = true;
-          state.information = action.payload.message;
         } else {
           state.success = true;
           state.currentUser = action.payload.user;
           state.information = action.payload.message;
           state.requestHeader = { headers: { Authorization: `Bearer ${action.payload.token}`, 'Content-Type': 'application/json' } };
+          console.log(action.payload);
+          console.log(state.currentUser);
+          console.log(state.requestHeader);
         }
       })
       .addCase(loginUser.pending, (state) => {
