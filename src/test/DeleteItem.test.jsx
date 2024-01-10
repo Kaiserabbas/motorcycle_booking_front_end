@@ -7,8 +7,9 @@ import '@testing-library/jest-dom';
 
 import { setToDelete } from '../redux/motorcycleSlice';
 
+const mockStore = configureStore();
+
 describe('DeleteItem component', () => {
-  const mockStore = configureStore();
   let store;
 
   beforeEach(() => {
@@ -23,11 +24,10 @@ describe('DeleteItem component', () => {
     const { getByText } = render(
       <Provider store={store}>
         <DeleteItem motorcycle={motorcycle} />
-      </Provider>
+      </Provider>,
     );
 
     // Check if the component renders successfully
     expect(getByText('Test Motorcycle')).toBeInTheDocument();
   });
-
 });
