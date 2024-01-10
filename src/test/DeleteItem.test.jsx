@@ -7,8 +7,9 @@ import '@testing-library/jest-dom';
 
 import { setToDelete } from '../redux/motorcycleSlice';
 
+const mockStore = configureStore();
+
 describe('DeleteItem component', () => {
-  const mockStore = configureStore();
   let store;
 
   beforeEach(() => {
