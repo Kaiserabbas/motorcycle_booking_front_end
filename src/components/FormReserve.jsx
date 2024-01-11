@@ -9,9 +9,9 @@ import {
 const FormReserve = () => {
   const currentUser = useSelector((state) => state.user.currentUser);
   const headerRequest = useSelector((state) => state.user.requestHeader);
-  const { selectedMotorcycle } = useSelector((state) => state.motorcycle);
+  const selectedMoto = useSelector((state) => state.motorcycle.selectedMotorcycle);
   const dispatch = useDispatch();
-  const motorcycles = useSelector((state) => state.motorcycle.motorcycles) || [];
+  const { motorcycles } = useSelector((state) => state.motorcycle);
   const { postSuccess } = useSelector((state) => state.reserve);
 
   useEffect(() => {
@@ -26,9 +26,7 @@ const FormReserve = () => {
 
   const [toPay, setToPay] = useState(0);
   const [timeCheck, setTimeCheck] = useState(false);
-  const [selected, setSelected] = useState(
-    selectedMotorcycle?.id ? selectedMotorcycle : motorcycles[0],
-  );
+  const [selected, setSelected] = useState(selectedMoto?.id ? selectedMoto : motorcycles[0]);
   const [valid, setValid] = useState(false);
   const [fulldate, setFullDate] = useState({
     fromDate: null,
@@ -40,7 +38,7 @@ const FormReserve = () => {
   const [reservation, setReservation] = useState({
     duration: 0,
     total: 0,
-    motorcycle_id: selected?.id || null,
+    motorcycle_id: selected.id,
     date: null,
     city: null,
   });
@@ -85,7 +83,7 @@ const FormReserve = () => {
       <div className="flexV">
         Please Select a Motorcycle
         <select
-          disabled={selectedMotorcycle ? true : ''}
+          disabled={selectedMoto ? true : ''}
           name="motorcycle"
           id="motorcycle"
           required
@@ -121,14 +119,14 @@ const FormReserve = () => {
             }
           }}
         >
-          {motorcycles.length > 0 ? motorcycles.map((motorcycle, index) => (
+          {motorcycles.map((motorcycle, index) => (
             index === 0 ? (
               <option
-                key={selectedMotorcycle ? selectedMotorcycle.id : motorcycle.id}
+                key={selectedMoto ? selectedMoto.id : motorcycle.id}
                 value={JSON.stringify(selected)}
                 selected
               >
-                {selectedMotorcycle ? selectedMotorcycle.name : motorcycle.name}
+                {selectedMoto ? selectedMoto.name : motorcycle.name}
               </option>
             )
               : (
@@ -140,7 +138,7 @@ const FormReserve = () => {
                 </option>
               )
 
-          )) : (<option>Empty</option>)}
+          ))}
         </select>
       </div>
 
@@ -246,7 +244,6 @@ const FormReserve = () => {
                     id="date"
                     onChange={(el) => {
                       setValid(validateTime2(fulldate.fromDate, el.target.value));
-                      console.log(validateTime2(fulldate.fromDate, el.target.value));
                       if (fulldate.fromHour && fulldate.fromDate && fulldate.toHour) {
                         const fromFullDate = new Date(fulldate.fromDate.concat('T').concat(fulldate.fromHour));
                         const toFullDate = new Date(el.target.value.concat('T').concat(fulldate.toHour));
@@ -314,7 +311,6 @@ const FormReserve = () => {
           </>
         )
       }
-
       {
         !timeCheck && (
           <>
@@ -352,7 +348,6 @@ const FormReserve = () => {
                     id="duration"
                     placeholder="Pick up a Time"
                     onChange={(element) => {
-                      console.log(element.target.value);
                       const hour = element.target.value[0].concat(element.target.value[1]) * 1;
                       const min = element.target.value[3].concat(element.target.value[4]) * 1;
                       const totalBookHour = (hour + min / 60).toFixed(1);

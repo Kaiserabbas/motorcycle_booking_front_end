@@ -25,7 +25,7 @@ const deleteMotorcycles = createAsyncThunk('deleteMotorcycles', async (requestOb
     const result = await axios.delete(motorclesPath.concat(`/${requestObject.data}`), requestObject.header);
     return result.data;
   } catch (error) {
-    return error;
+    return error.response.data;
   }
 });
 
@@ -86,11 +86,11 @@ const motorcycleSlice = createSlice({
       })
       .addCase(deleteMotorcycles.fulfilled, (state, action) => {
         state.isLoading = false;
+        state.information = action.payload.message;
         if (action.payload?.success) {
           state.error = false;
           state.success = true;
         } else {
-          state.information = 'can not delete a reserved Motorcycle!';
           state.error = true;
           state.success = false;
         }
