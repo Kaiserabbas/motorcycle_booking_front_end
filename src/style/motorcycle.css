@@ -1,0 +1,248 @@
+.motorcycleItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0 5px 0 5px;
+  justify-content: center;
+}
+
+.motorcycleDetailsContainer {
+  display: grid;
+  grid-template-columns: 5% 80% 15%;
+  height: 100vh;
+}
+
+#notfoundImg {
+  margin-top: 5rem;
+  height: 50%;
+  width: 50%;
+}
+
+.motorcycleDetailsContainerMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.motorcycleDetailsContainerAbout {
+  padding: 1rem;
+}
+
+.motorcycleDetailsContainerMain img {
+  width: 100%;
+  height: 75%;
+  transition: all 1s ease-in-out;
+}
+
+.selectedItemPriceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem 5rem 0.5rem 0;
+  background-color: rgba(167, 165, 165, 0.425);
+  gap: 0.5rem;
+}
+
+.selectedItemPriceContainer p {
+  font-size: 10px;
+  font-weight: 700;
+  margin-right: 5rem;
+  width: 100%;
+}
+
+.detailsItemHeader {
+  margin-top: 20%;
+  text-align: end;
+}
+
+.detailsItemHeader h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.detailsItemBody {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.detailsItemBody button {
+  background-color: #97bf11;
+  color: white;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-radius: 30px;
+}
+
+.btnContainer {
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+}
+
+.motorcycleItemPicture {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.motorcycleItemPicture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  transition: 1s 0.5s ease-in-out;
+}
+
+.photoItem:hover {
+  transform: scale(1.1);
+}
+
+.motorcycleItemNameModel {
+  margin-top: 2rem;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.bar {
+  border: 1px dashed rgba(220, 200, 200, 0.72);
+  width: 60%;
+  align-self: center;
+}
+
+.motorcycleItemDescription,
+.motorcycleItemLinks {
+  margin-top: 1rem;
+}
+
+.motorcycleItemLinks {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.motorcycleItemLinks p {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  color: rgba(163, 162, 162, 0.863);
+}
+
+.buttonContainer {
+  padding-top: 1rem;
+}
+
+.buttonContainer button,
+.reservebuttonContainer button {
+  background-color: #97bf11;
+  color: white;
+  padding: 0.8rem 2rem 0.8rem 2rem;
+  border-radius: 20px;
+}
+
+.reservebuttonContainer button {
+  background-color: white;
+  border-radius: 20px;
+  color: #97bf11;
+}
+
+.itemImagePreview {
+  align-items: flex-end;
+  gap: 2rem;
+  padding-right: 10rem;
+  margin-top: -2rem;
+}
+
+.itemImagePreviewContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  height: 10rem;
+  width: 14rem;
+}
+
+.itemImagePreviewContainer img {
+  width: 100%;
+  height: 100%;
+  transition: all 1.5s 1.5s ease-in-out;
+  border-radius: 8px;
+  margin-top: 7px;
+}
+
+.previewImage:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  border-radius: 16px;
+}
+
+.addMottorcycleContainer {
+  margin-top: 1.3rem;
+}
+
+/* .hide {
+    display: none;
+} */
+
+.motorcycleForm {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem 1rem 1rem;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .motorcycleForm {
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    grid-template-rows: 100fr;
+    margin: 2rem 1rem 1rem 1rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+
+  .motorcycleItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .motorcycleItemPicture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    cursor: pointer;
+  }
+
+  .detailsItemBody {
+    margin-top: 20rem;
+  }
+
+  .motorcycleDetailsContainerMain img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .selectedItemPriceContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 0.4rem 0.5rem 0.4rem;
+    margin: 2rem 0 0.5rem 0;
+    background-color: rgba(167, 165, 165, 0.425);
+  }
+
+  .selectedItemPriceContainer p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+#description {
+  text-align: center;
+}

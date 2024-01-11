@@ -1,0 +1,208 @@
+.reserveContainer {
+  background-size: 100%;
+  background-position: center;
+  background-image: url('../img/VESPA_YELLOW.jpg');
+  color: white;
+  background-repeat: no-repeat;
+}
+
+.reserveDiv {
+  width: 100%;
+  color: white;
+  height: inherit;
+}
+
+.glassContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  color: #97bf11;
+  border-radius: 16px;
+}
+
+#notfoundImg {
+  height: 50%;
+  width: 50%;
+}
+
+#glass,
+#hamburrguerIcon {
+  cursor: pointer;
+}
+
+#glass {
+  transform: rotateY(180deg);
+}
+
+.reseveBodyContainer {
+  height: 100vh;
+  opacity: 0.9;
+}
+
+.reseverNavbarContainer .navContainer .navList .active {
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  padding-left: 1.5rem;
+}
+
+.reseverNavbarContainer {
+  transition: all 1s 1s ease-in-out;
+}
+
+.reseverNavbarContainer::content {
+  background-color: red;
+}
+
+.reserveTime {
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.reserveTime .flexV input {
+  padding: 0.7rem;
+}
+
+.reserveTime .flexV input[type="number"],
+#duration {
+  padding: 0.7rem;
+  width: 100%;
+}
+
+.reseverNavbarContainer .navContainer .footerNav {
+  color: black;
+}
+
+.totalToPay {
+  align-self: flex-end;
+}
+
+.totalToPay input {
+  text-align: center;
+  font-weight: bolder;
+}
+
+#toPay {
+  color: black;
+  transition: all 1s ease-in-out;
+  margin-left: 5%;
+  font-size: 15px;
+}
+
+#toPay:hover {
+  color: rgba(184, 25, 25, 0.829);
+  background-color: white;
+  cursor: pointer;
+}
+
+.checkContainer label {
+  cursor: pointer;
+}
+
+#daysCheckbox {
+  height: 1rem;
+  width: 1rem;
+}
+
+#invalid {
+  color: rgb(122, 18, 18);
+  margin-left: 1rem;
+  background-color: whitesmoke;
+}
+
+#btnSubmitReserve {
+  background-color: blue;
+}
+
+.reserveItem {
+  margin: 2rem;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.checkContainer {
+  width: fit-content;
+}
+
+.reservesItemListContainer {
+  height: inherit;
+  overflow-y: scroll;
+  padding-top: 2rem;
+}
+
+.reserveContainerContent {
+  display: grid;
+  opacity: 0.9;
+
+  /* height: 100vh; */
+  background-color: #97bf11;
+  height: inherit;
+}
+
+.formReserve {
+  margin-top: 4rem;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.revervesTableContainer {
+  padding: 1rem;
+}
+
+.reservesTableHead {
+  display: grid;
+  grid-template-columns: 30fr 40fr 30fr;
+  background-color: #96bf11e1;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.reservesTableBody {
+  padding: 1rem;
+}
+
+.reservationItem {
+  display: grid;
+  grid-template-columns: 30fr 40fr 30fr;
+  padding: 1rem;
+  border: 1px dashed #97bf11;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  transition: all 2s ease-in-out;
+  text-transform: capitalize;
+}
+
+.reservationItem:hover {
+  background-color: #a8c548;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.reserveFormHeader {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .reserveFormHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 0 1rem;
+    align-items: center;
+  }
+
+  .reseverNavbarContainer {
+    width: 21%;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .reserveContainerContent {
+    grid-template-rows: 5fr 95fr;
+  }
+}
