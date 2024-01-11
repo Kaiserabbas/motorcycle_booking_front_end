@@ -14,8 +14,6 @@ describe('Motorcycle component', () => {
   test('renders not-found image when imageLink is not available', () => {
     const motorcycleDataWithoutImage = { ...motorcycleData, imageLink: null };
     render(<Motorcycle motorcycle={motorcycleDataWithoutImage} />);
-
-    // Check if the not-found image is rendered when imageLink is not available
     expect(screen.queryByAltText('Notfound item')).toBeNull();
   });
 

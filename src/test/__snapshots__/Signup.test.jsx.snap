@@ -64,6 +64,22 @@ Object {
               </label>
             </div>
             <div
+              class="flexV"
+            >
+              <label
+                for="admin"
+              >
+                <h4>
+                  Administrator ?
+                </h4>
+                <input
+                  id="admin"
+                  name="admin"
+                  type="checkbox"
+                />
+              </label>
+            </div>
+            <div
               class="loginButtons flexH"
             >
               <button
@@ -143,6 +159,22 @@ Object {
                 name="password"
                 required=""
                 type="password"
+              />
+            </label>
+          </div>
+          <div
+            class="flexV"
+          >
+            <label
+              for="admin"
+            >
+              <h4>
+                Administrator ?
+              </h4>
+              <input
+                id="admin"
+                name="admin"
+                type="checkbox"
               />
             </label>
           </div>
