@@ -10,6 +10,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [🧗‍♂️ Kanban Board](#kanban-board)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -52,6 +53,7 @@ React, redux, node, Visual Studio Code, WSL
 
 - [Live Demo Link](https://motobookingapp.onrender.com)
 
+## 🧗‍♂️ Kanban Board <a name="kanban-board"></a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
