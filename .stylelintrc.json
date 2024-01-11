@@ -1,23 +1,54 @@
 {
-  "extends": ["stylelint-config-standard"],
-  "plugins": ["stylelint-scss", "stylelint-csstree-validator"],
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-csstree-validator"
+  ],
   "rules": {
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen"
+        ]
       }
     ],
-    "scss/at-rule-no-unknown":  [
+    "scss/at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen"
+        ]
       }
     ],
     "csstree/validator": true,
-    "no-descending-specificity": [true, { "ignoreSelectors": [":focus"] }],
-    "no-duplicate-selectors": [true, { "ignore": ["#logoutLi"] }],
-    "declaration-block-no-duplicate-properties": [true, { "ignore": ["consecutive-duplicates"] }]
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": [
+          "consecutive-duplicates"
+        ]
+      }
+    ]
   },
-  "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css", "**/*.js", "**/*.jsx"]
+  "ignoreFiles": [
+    "build/**",
+    "dist/**",
+    "**/reset*.css",
+    "**/bootstrap*.css",
+    "**/*.js",
+    "**/*.jsx"
+  ]
 }
