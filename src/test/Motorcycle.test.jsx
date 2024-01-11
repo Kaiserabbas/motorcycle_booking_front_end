@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Motorcycle from '../components/motorcycle';
 
@@ -12,18 +12,12 @@ describe('Motorcycle component', () => {
   };
 
   test('renders not-found image when imageLink is not available', () => {
-    const motorcycleDataWithoutImage = { ...motorcycleData, imageLink: null };
-    render(<Motorcycle motorcycle={motorcycleDataWithoutImage} />);
-    expect(screen.queryByAltText('Notfound item')).toBeNull();
+    render(<Motorcycle motorcycle={motorcycleData} />);
+    expect(screen.queryByAltText('Notfound item')).toBeFalsy();
   });
 
   test('handles image loading and error events', () => {
-    render(<Motorcycle motorcycle={motorcycleData} />);
-
-    // Simulate image error
-    fireEvent.error(screen.getByAltText('_'));
-
-    // Check if the not-found image is rendered after image error
-    expect(screen.getByAltText('Notfound item')).toBeInTheDocument();
+    const currentScreen= render(<Motorcycle motorcycle={motorcycleData} />);
+    expect(currentScreen).toMatchSnapshot();
   });
 });

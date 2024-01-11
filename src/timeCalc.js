@@ -42,7 +42,6 @@ function validateTime2(timeFrom, timeTo) {
   if (timeTo) {
     const time1 = new Date(timeFrom);
     const time2 = new Date(timeTo);
-
     if (today.getFullYear() < time2.getFullYear() && time2.getFullYear() > time1.getFullYear()) {
       return true;
     }
@@ -53,7 +52,7 @@ function validateTime2(timeFrom, timeTo) {
         return true;
       }
       if (time2.getMonth() === time1.getMonth()) {
-        if (time2.getDate() >= time1.getDate()) {
+        if (time2.getDate() * 1 >= time1.getDate() * 1) {
           return true;
         }
       }
