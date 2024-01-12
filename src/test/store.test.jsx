@@ -10,8 +10,6 @@ test('renders with Redux store', () => {
     </Provider>,
   );
 
-  // Add assertions as needed based on your testing requirements
-  // For example, you can check if a specific component renders successfully
   const testComponent = screen.getByText(/Test component with Redux store/i);
   expect(testComponent).toBeInTheDocument();
 });
