@@ -31,10 +31,10 @@
 https://github.com/Kaiserabbas/motorcycle_booking_front_end/assets/123939543/d2f8989e-2e34-41d3-89bb-2d0658cb0e26
 
 
-**Motorcycle Booking Front-end** This repository contains the React/Redux front-end application for the "Motorcycle Booking" project. The front-end provides an intuitive user interface for interacting with the booking system. Users can log in with a username, browse a list of motorcycles, view detailed information about specific motorcycles, reserve appointments, add new motorcycles, and manage existing ones. The application is designed to be responsive, offering a seamless experience on both desktop and mobile devices. The front-end communicates with the back-end API to ensure a cohesive and efficient user experience.
+**Motorcycle Booking Front-end** This repository contains the React/Redux front-end application for the "Motorcycle Booking" project. The front-end provides an intuitive user interface for interacting with the booking system. Users can log in with a username, browse a list of motorcycles, view detailed information about specific motorcycles, reserve appointments, add new motorcycles, and manage existing ones. The application is designed to be responsive, offering a seamless experience on both desktop and mobile devices. The front-end communicates with the back-end API to ensure a cohesive and efficient user experience...
 
 ## 🛠 Built With <a name="built-with"></a>
-React, redux, node, Visual Studio Code, WSL
+React, redux, node, Visual Studio Code, Rails
 
 ### Tech Stack <a name="tech-stack"></a>
 
