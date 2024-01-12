@@ -40,7 +40,7 @@ React, redux, node, Visual Studio Code, Rails
 
 - **React**
 - **Redux**
-- **WSL**
+- **Ruby on Rails**
 
 ### Key Features <a name="key-features"></a>
 
@@ -122,6 +122,7 @@ Back-end API project [link](https://github.com/Kaiserabbas/motorcycle_booking_ba
 - **Appointment Calendar**
 - **Real-time Updates**
 - **User Reviews and Feedback**
+- **Make a good front end user Authentication**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
