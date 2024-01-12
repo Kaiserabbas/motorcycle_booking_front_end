@@ -123,6 +123,7 @@ Back-end API project [link](https://github.com/Kaiserabbas/motorcycle_booking_ba
 - **Real-time Updates**
 - **User Reviews and Feedback**
 - **Make a good front end user Authentication**
+- **Add Email Confirmation**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
