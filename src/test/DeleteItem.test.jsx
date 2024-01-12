@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import DeleteItem from '../components/DeteteItem';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
+import DeleteItem from '../components/DeteteItem';
 import store from '../redux/store';
 
 describe('DeleteItem component', () => {
@@ -11,8 +11,9 @@ describe('DeleteItem component', () => {
 
     const { getByText } = render(
       <Provider store={store}>
-        <DeleteItem motorcycle={motorcycle} />,
-      </Provider>
+        <DeleteItem motorcycle={motorcycle} />
+        ,
+      </Provider>,
     );
 
     expect(getByText('Test Motorcycle')).toBeInTheDocument();
